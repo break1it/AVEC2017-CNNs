@@ -5,9 +5,9 @@ if __name__ == '__main__':
     loadpath = 'D:/PythonProjects_Data/AVEC2017_Step3_Spectrum/'
     savepath = 'D:/PythonProjects_Data/AVEC2017_Step4_Normalization_Part1/'
 
-    for foldA in os.listdir(loadpath)[2:3]:
+    for foldA in os.listdir(loadpath)[2:]:
         # os.makedirs(os.path.join(savepath, foldA))
-        for foldB in os.listdir(os.path.join(loadpath, foldA))[70:]:
+        for foldB in os.listdir(os.path.join(loadpath, foldA))[100:]:
 
             totalData = []
             for filename in os.listdir(os.path.join(loadpath, foldA, foldB)):
