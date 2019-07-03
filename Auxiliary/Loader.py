@@ -35,5 +35,32 @@ def Loader_CNN(maxSentence=5):
     return trainData, trainLabel, developData, developLabel, testData, testLabel
 
 
+def Loader_SpeechRecognition(maxSentence=10):
+    loadpath = 'D:/PythonProjects_Data/Data_AVEC2017_SpeechRecognition/'
+    totalData, totalLabel = [], []
+
+    for fold in os.listdir(loadpath):
+        for filename in os.listdir(os.path.join(loadpath, fold))[0:maxSentence]:
+            if filename.find('Data') == -1: continue
+
+            batchData = numpy.load(file=os.path.join(loadpath, fold, filename))
+            with open(os.path.join(loadpath, fold, filename.replace('Data.npy', 'Label.csv')), 'r') as file:
+                batchLabelStr = file.readlines()
+                batchLabel = []
+                for sample in batchLabelStr:
+                    sample = sample.split(',')
+                    current = []
+                    for subsample in sample[0:-1]:
+                        current.append(int(subsample))
+                    batchLabel.append(current)
+
+            print(fold, filename, numpy.shape(batchData), numpy.shape(batchLabel))
+            totalData.extend(batchData)
+            totalLabel.extend(batchLabel)
+
+    print(numpy.shape(totalData), numpy.shape(totalLabel))
+    return totalData, totalLabel
+
+
 if __name__ == '__main__':
-    Loader_CNN()
+    Loader_SpeechRecognition()
