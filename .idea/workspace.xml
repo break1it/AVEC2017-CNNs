@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2d64badc-8a89-446e-93d7-bf3a90bb3e1c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auxiliary/Loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auxiliary/Loader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RunProgram/log.csv" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,22 +13,61 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LIDC_201905/Experiment.py">
+        <entry file="file://$PROJECT_DIR$/AMIGO/DataPretreatment.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="800">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="-128">
+              <caret line="95" column="29" selection-start-line="95" selection-start-column="29" selection-end-line="95" selection-end-column="29" />
               <folding>
-                <element signature="e#0#46#0" expanded="true" />
+                <element signature="e#385#396#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AMIGO/Step1_Convert2Matrix.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="448">
+              <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/LIDC_201905/Model.py">
+        <entry file="file://$PROJECT_DIR$/AMIGO/Step2_Assembly2Npy.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="115" column="21" selection-start-line="113" selection-start-column="4" selection-end-line="115" selection-end-column="23" />
+            <state relative-caret-position="256">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AMIGO/Step3_Normalization.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="218">
+              <caret line="22" column="53" lean-forward="true" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AMIGO/Step4_Split.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="11" column="50" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -71,6 +108,13 @@
         <option value="$PROJECT_DIR$/LIDC/Model.py" />
         <option value="$PROJECT_DIR$/LIDC_201905/Experiment.py" />
         <option value="$PROJECT_DIR$/LIDC_201905/Model.py" />
+        <option value="$PROJECT_DIR$/AMIGO/DataPretreatment.py" />
+        <option value="$PROJECT_DIR$/AMIGO/Pretreatment.py" />
+        <option value="$PROJECT_DIR$/AMIGO/Step2_Split.py" />
+        <option value="$PROJECT_DIR$/AMIGO/Step3_Split.py" />
+        <option value="$PROJECT_DIR$/AMIGO/Step2_Normalization.py" />
+        <option value="$PROJECT_DIR$/AMIGO/Step3_Normalization.py" />
+        <option value="$PROJECT_DIR$/AMIGO/Step2_Assembly2Npy.py" />
       </list>
     </option>
   </component>
@@ -99,12 +143,17 @@
             <path>
               <item name="AVEC2017-CNNs" type="b2602c69:ProjectViewProjectNode" />
               <item name="AVEC2017-CNNs" type="462c0819:PsiDirectoryNode" />
+              <item name="AMIGO" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AVEC2017-CNNs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AVEC2017-CNNs" type="462c0819:PsiDirectoryNode" />
               <item name="Auxiliary" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AVEC2017-CNNs" type="b2602c69:ProjectViewProjectNode" />
               <item name="AVEC2017-CNNs" type="462c0819:PsiDirectoryNode" />
-              <item name="LIDC_201905" type="462c0819:PsiDirectoryNode" />
+              <item name="LIDC_Again" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -131,8 +180,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Experiment">
-    <configuration name="Exp_SpeechRecognition" type="PythonConfigurationType" factoryName="Python" singleton="false" temporary="true">
+  <component name="RunManager" selected="Python.Step2_Assembly2Npy">
+    <configuration name="Pretreatment" type="PythonConfigurationType" factoryName="Python" singleton="false" temporary="true">
       <module name="AVEC2017-CNNs" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -140,12 +189,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="C:\Anaconda3\envs\tensorflow\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/RunProgram" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AMIGO" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RunProgram/Exp_SpeechRecognition.py" />
+      <option name="SCRIPT_NAME" value="D:\PythonProjects\AVEC2017-CNNs\AMIGO\Step1_Convert2Matrix.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -154,7 +203,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Experiment" type="PythonConfigurationType" factoryName="Python" singleton="false" temporary="true">
+    <configuration name="Step1_Convert2Matrix" type="PythonConfigurationType" factoryName="Python" singleton="false" temporary="true">
       <module name="AVEC2017-CNNs" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -162,12 +211,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="C:\Anaconda3\envs\tensorflow\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LIDC_201905" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AMIGO" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LIDC_201905/Experiment.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AMIGO/Step1_Convert2Matrix.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -176,7 +225,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Loader" type="PythonConfigurationType" factoryName="Python" singleton="false" temporary="true">
+    <configuration name="Step2_Assembly2Npy" type="PythonConfigurationType" factoryName="Python" singleton="false" temporary="true">
       <module name="AVEC2017-CNNs" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -184,12 +233,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="C:\Anaconda3\envs\tensorflow\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Auxiliary" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AMIGO" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Auxiliary/Loader.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AMIGO/Step2_Assembly2Npy.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -198,7 +247,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Step2_CMU2Digital" type="PythonConfigurationType" factoryName="Python" singleton="false" temporary="true">
+    <configuration name="Step2_Split" type="PythonConfigurationType" factoryName="Python" singleton="false" temporary="true">
       <module name="AVEC2017-CNNs" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -206,12 +255,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="C:\Anaconda3\envs\tensorflow\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Pretreatment/CMU_Label_Treatment" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AMIGO" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Pretreatment/CMU_Label_Treatment/Step2_CMU2Digital.py" />
+      <option name="SCRIPT_NAME" value="D:\PythonProjects\AVEC2017-CNNs\AMIGO\Step4_Split.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -220,7 +269,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Step3_Assembly2Npy_SpeechRecognition" type="PythonConfigurationType" factoryName="Python" singleton="false" temporary="true">
+    <configuration name="Step3_Normalization" type="PythonConfigurationType" factoryName="Python" singleton="false" temporary="true">
       <module name="AVEC2017-CNNs" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -228,12 +277,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="C:\Anaconda3\envs\tensorflow\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Pretreatment/CMU_Label_Treatment" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AMIGO" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Pretreatment/CMU_Label_Treatment/Step3_Assembly2Npy_SpeechRecognition.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AMIGO/Step3_Normalization.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -265,19 +314,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.Step2_CMU2Digital" />
-      <item itemvalue="Python.Step3_Assembly2Npy_SpeechRecognition" />
-      <item itemvalue="Python.Loader" />
-      <item itemvalue="Python.Exp_SpeechRecognition" />
-      <item itemvalue="Python.Experiment" />
+      <item itemvalue="Python.Pretreatment" />
+      <item itemvalue="Python.Step2_Split" />
+      <item itemvalue="Python.Step2_Assembly2Npy" />
+      <item itemvalue="Python.Step1_Convert2Matrix" />
+      <item itemvalue="Python.Step3_Normalization" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Experiment" />
-        <item itemvalue="Python.Exp_SpeechRecognition" />
-        <item itemvalue="Python.Loader" />
-        <item itemvalue="Python.Step3_Assembly2Npy_SpeechRecognition" />
-        <item itemvalue="Python.Step2_CMU2Digital" />
+        <item itemvalue="Python.Step2_Assembly2Npy" />
+        <item itemvalue="Python.Step3_Normalization" />
+        <item itemvalue="Python.Step1_Convert2Matrix" />
+        <item itemvalue="Python.Step2_Split" />
+        <item itemvalue="Python.Pretreatment" />
       </list>
     </recent_temporary>
   </component>
@@ -300,12 +349,14 @@
       <workItem from="1562026141485" duration="9344000" />
       <workItem from="1562045165972" duration="5758000" />
       <workItem from="1562052722633" duration="5509000" />
-      <workItem from="1562112263306" duration="828000" />
+      <workItem from="1562112263306" duration="1630000" />
+      <workItem from="1562219861867" duration="3104000" />
+      <workItem from="1562223106061" duration="10302000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54268000" />
+    <option name="totallyTimeSpent" value="68476000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -320,7 +371,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.2249467" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.22707888" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -350,19 +401,25 @@
     <SUITE FILE_PATH="coverage/AVEC2017_CNNs$Exp_SpeechRecognition.coverage" NAME="Exp_SpeechRecognition Coverage Results" MODIFIED="1562049779713" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/RunProgram" />
     <SUITE FILE_PATH="coverage/AVEC2017_CNNs$Step2_VoiceSeparate.coverage" NAME="Step2_VoiceSeparate Coverage Results" MODIFIED="1561777616592" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Pretreatment" />
     <SUITE FILE_PATH="coverage/AVEC2017_CNNs$Test.coverage" NAME="Test Coverage Results" MODIFIED="1561883193061" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AVEC2017_CNNs$Step1_Convert2Matrix.coverage" NAME="Step1_Convert2Matrix Coverage Results" MODIFIED="1562237911949" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AMIGO" />
     <SUITE FILE_PATH="coverage/AVEC2017_CNNs$Exp_SimpleCNN.coverage" NAME="Exp_SimpleCNN Coverage Results" MODIFIED="1561877490837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/RunProgram" />
+    <SUITE FILE_PATH="coverage/AVEC2017_CNNs$Step2_Assembly2Npy.coverage" NAME="Step2_Assembly2Npy Coverage Results" MODIFIED="1562243242889" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AMIGO" />
     <SUITE FILE_PATH="coverage/AVEC2017_CNNs$SimpleCNN.coverage" NAME="SimpleCNN Coverage Results" MODIFIED="1561799475206" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Model" />
     <SUITE FILE_PATH="coverage/AVEC2017_CNNs$Step4_Normalization_Part1.coverage" NAME="Step4_Normalization_Part1 Coverage Results" MODIFIED="1561780177270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Pretreatment" />
     <SUITE FILE_PATH="coverage/AVEC2017_CNNs$Experiment.coverage" NAME="Experiment Coverage Results" MODIFIED="1562057530506" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LIDC_201905" />
+    <SUITE FILE_PATH="coverage/AVEC2017_CNNs$DataPretreatment.coverage" NAME="DataPretreatment Coverage Results" MODIFIED="1562222134045" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AMIGO" />
     <SUITE FILE_PATH="coverage/AVEC2017_CNNs$Step3_SpectrumGeneration.coverage" NAME="Step3_SpectrumGeneration Coverage Results" MODIFIED="1561778111348" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Pretreatment" />
     <SUITE FILE_PATH="coverage/AVEC2017_CNNs$Step4_Normalization_Part2.coverage" NAME="Step4_Normalization_Part2 Coverage Results" MODIFIED="1561780414905" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Pretreatment" />
     <SUITE FILE_PATH="coverage/AVEC2017_CNNs$Step5_Assembly2Npy_CNN.coverage" NAME="Step5_Assembly2Npy_CNN Coverage Results" MODIFIED="1561784748872" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Pretreatment" />
+    <SUITE FILE_PATH="coverage/AVEC2017_CNNs$Step3_Normalization.coverage" NAME="Step3_Normalization Coverage Results" MODIFIED="1562240709490" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AMIGO" />
     <SUITE FILE_PATH="coverage/AVEC2017_CNNs$Step1_Filter.coverage" NAME="Step1_Filter Coverage Results" MODIFIED="1561777593381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Pretreatment" />
     <SUITE FILE_PATH="coverage/AVEC2017_CNNs$Loader.coverage" NAME="Loader Coverage Results" MODIFIED="1561990779983" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Auxiliary" />
     <SUITE FILE_PATH="coverage/AVEC2017_CNNs$Step3_Assembly2Npy_SpeechRecognition.coverage" NAME="Step3_Assembly2Npy_SpeechRecognition Coverage Results" MODIFIED="1561902953802" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Pretreatment/CMU_Label_Treatment" />
     <SUITE FILE_PATH="coverage/AVEC2017_CNNs$Step2_CMU2Digital.coverage" NAME="Step2_CMU2Digital Coverage Results" MODIFIED="1561902887367" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Pretreatment/CMU_Label_Treatment" />
+    <SUITE FILE_PATH="coverage/AVEC2017_CNNs$Pretreatment.coverage" NAME="Pretreatment Coverage Results" MODIFIED="1562226392658" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AMIGO" />
     <SUITE FILE_PATH="coverage/AVEC2017_CNNs$BestChoose.coverage" NAME="BestChoose Coverage Results" MODIFIED="1561888157712" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/AVEC2017_CNNs$Step1_CMULabel_Generation.coverage" NAME="Step1_CMULabel_Generation Coverage Results" MODIFIED="1561902859086" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Pretreatment/CMU_Label_Treatment" />
+    <SUITE FILE_PATH="coverage/AVEC2017_CNNs$Step2_Split.coverage" NAME="Step2_Split Coverage Results" MODIFIED="1562226797769" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AMIGO" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Pretreatment/Step1_Filter.py">
@@ -559,9 +616,9 @@
     <entry file="file://$PROJECT_DIR$/LIDC/Experiment.py" />
     <entry file="file://$PROJECT_DIR$/LIDC/Valid.py" />
     <entry file="file://$PROJECT_DIR$/LIDC/Model.py" />
-    <entry file="file://$PROJECT_DIR$/LIDC_201905/Experiment.py">
+    <entry file="file://$PROJECT_DIR$/LIDC_Again/Experiment.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="800">
+        <state relative-caret-position="928">
           <caret line="29" selection-start-line="29" selection-end-line="29" />
           <folding>
             <element signature="e#0#46#0" expanded="true" />
@@ -569,10 +626,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LIDC_201905/Model.py">
+    <entry file="file://$PROJECT_DIR$/LIDC_Again/Model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="115" column="21" selection-start-line="113" selection-start-column="4" selection-end-line="115" selection-end-column="23" />
+        <state relative-caret-position="1018">
+          <caret line="112" lean-forward="true" selection-start-line="112" selection-end-line="112" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AMIGO/DataPretreatment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-128">
+          <caret line="95" column="29" selection-start-line="95" selection-start-column="29" selection-end-line="95" selection-end-column="29" />
+          <folding>
+            <element signature="e#385#396#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AMIGO/Step4_Split.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="11" column="50" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AMIGO/Step1_Convert2Matrix.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AMIGO/Step3_Normalization.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="22" column="53" lean-forward="true" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AMIGO/Step2_Assembly2Npy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
