@@ -14,7 +14,7 @@ def SpectrumGeneration(savepath, data):
             file.write('\n')
 
 
-APPOINT = 0
+APPOINT = 6
 
 if __name__ == '__main__':
     loadpath = 'D:/PythonProjects_Data/AMIGO/Step1_Convert2Matrix/'
