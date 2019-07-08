@@ -2,7 +2,7 @@ import numpy
 import os
 
 if __name__ == '__main__':
-    for appoint in range(1, 17, 2):
+    for appoint in range(2, 17, 2):
         datapath = 'D:/PythonProjects_Data/AMIGO/Step4_Split/Vector%02d/' % appoint
         labelpath = 'D:/PythonProjects_Data/AMIGO/Step5_LabelCopy/'
         savepath = 'D:/PythonProjects_Data/AMIGO/Step6_FinalNpy/Vector%02d/' % appoint
