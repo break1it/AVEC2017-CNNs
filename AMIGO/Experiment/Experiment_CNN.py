@@ -1,18 +1,7 @@
 import os
-import numpy
 from AMIGO.Loader import Loader
-from AMIGO.Model_CNN import CNN_SingleTask
-
-
-def LabelPretreatment(label):
-    returnLabel = []
-    for sample in label:
-        if sample == 0:
-            returnLabel.append([1, 0])
-        else:
-            returnLabel.append([0, 1])
-    return returnLabel
-
+from AMIGO.Model.Model_CNN import CNN_SingleTask
+from AMIGO.Tools import LabelPretreatment
 
 if __name__ == '__main__':
     appoint = 2

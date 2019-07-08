@@ -20,6 +20,16 @@ def F1Score_Calculator(label, predict):
     pass
 
 
+def LabelPretreatment(label):
+    returnLabel = []
+    for sample in label:
+        if sample == 0:
+            returnLabel.append([1, 0])
+        else:
+            returnLabel.append([0, 1])
+    return returnLabel
+
+
 class NeuralNetwork_Base:
     def __init__(self, trainData, trainLabel, batchSize=32, learningRate=1E-3, startFlag=True, graphRevealFlag=True,
                  graphPath='logs/', occupyRate=-1):
