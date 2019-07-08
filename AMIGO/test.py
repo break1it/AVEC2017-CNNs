@@ -1,10 +1,13 @@
+import numpy
 import os
 
 if __name__ == '__main__':
-    loadpath = 'D:/PythonProjects_Data/AMIGO/Step1_Convert2Matrix/'
+    loadpath = 'D:/PythonProjects_Data/AMIGO/Experiment-Result/Sample-02-Valence-TestResult/'
 
-    for foldname in os.listdir(loadpath):
-        for filename in os.listdir(os.path.join(loadpath, foldname)):
-            with open(os.path.join(loadpath, foldname, filename), 'r') as file:
-                data = file.read()
-            if data.find('nan') != -1: print(foldname, filename)
+    for filename in os.listdir(loadpath):
+        data = numpy.genfromtxt(fname=os.path.join(loadpath, filename), dtype=int, delimiter=',')
+
+        matrix = numpy.zeros([2, 2])
+        for sample in data:
+            matrix[sample[0]][sample[1]] += 1
+        print(matrix)

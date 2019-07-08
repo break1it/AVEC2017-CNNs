@@ -25,4 +25,4 @@ def Loader(name, appoint):
             trainLabel.extend(label)
 
     print(numpy.shape(trainData), numpy.shape(trainLabel), numpy.shape(testData), numpy.shape(testLabel))
-    return trainData, trainLabel, testData, testLabel
+    return trainData, numpy.array(trainLabel), testData, numpy.array(testLabel)
