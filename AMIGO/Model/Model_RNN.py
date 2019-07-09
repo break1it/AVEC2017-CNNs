@@ -1,6 +1,7 @@
 from AMIGO.Tools import NeuralNetwork_Base, Shuffle_Double
 import tensorflow
 from tensorflow.contrib import rnn
+import numpy
 
 
 def StandardAttentionInitializer(dataInput, scopeName, hiddenNoduleNumber, blstmFlag=True):
@@ -66,6 +67,16 @@ class BLSTM(NeuralNetwork_Base):
     def __init__(self, trainData, trainLabel, batchSize=32, hiddenNodules=128, rnnLayers=2, learningRate=1E-3,
                  startFlag=True, graphRevealFlag=True, graphPath='logs/', occupyRate=-1):
         self.hiddenNodules, self.rnnLayers = hiddenNodules, rnnLayers
+        self.positiveData, self.positiveLabel, self.negativeData, self.negativeLabel = [], [], [], []
+
+        for index in range(numpy.shape(trainData)[0]):
+            if numpy.argmax(trainLabel[index]) == 0:
+                self.negativeData.append(trainData[index])
+                self.negativeLabel.append(trainLabel[index])
+            else:
+                self.positiveData.append(trainData[index])
+                self.positiveLabel.append(trainLabel[index])
+
         super(BLSTM, self).__init__(
             trainData=trainData, trainLabel=trainLabel, batchSize=batchSize, learningRate=learningRate,
             startFlag=startFlag, graphRevealFlag=graphRevealFlag, graphPath=graphPath, occupyRate=occupyRate)
@@ -83,9 +94,73 @@ class BLSTM(NeuralNetwork_Base):
             tensorflow.nn.bidirectional_dynamic_rnn(
                 cell_fw=self.parameters['Cell_FW'], cell_bw=self.parameters['Cell_BW'],
                 inputs=self.dataInput, dtype=tensorflow.float32)
+        self.parameters['AttentionList'] = StandardAttentionInitializer(
+            dataInput=self.parameters['BLSTM_Output'], scopeName='StandardAttention',
+            hiddenNoduleNumber=2 * self.hiddenNodules, blstmFlag=True)
+        self.parameters['AttentionResult'] = self.parameters['AttentionList']['FinalResult']
+
+        self.parameters['Predict'] = tensorflow.layers.dense(
+            inputs=self.parameters['AttentionResult'], units=2, activation=None, name='Predict')
+        self.parameters['Loss'] = tensorflow.losses.softmax_cross_entropy(
+            onehot_labels=self.labelInput, logits=self.parameters['Predict'], weights=10)
+        self.train = tensorflow.train.AdamOptimizer(learning_rate=learningRate).minimize(self.parameters['Loss'])
 
     def Train(self, logName):
-        pass
+        negativeData, negativeLabel = Shuffle_Double(self.negativeData, self.negativeLabel)
+
+        trainData, trainLabel = \
+            numpy.concatenate([self.positiveData, negativeData[0:numpy.shape(self.positiveData)[0]]], axis=0), \
+            numpy.concatenate([self.positiveLabel, negativeLabel[0:numpy.shape(self.positiveLabel)[0]]], axis=0)
+
+        trainData, trainLabel = Shuffle_Double(trainData, trainLabel)
+
+        with open(logName, 'w') as file:
+            startPosition = 0
+            totalLoss = 0.0
+            while startPosition < numpy.shape(trainData)[0]:
+                loss, _ = self.session.run(fetches=[self.parameters['Loss'], self.train], feed_dict={
+                    self.dataInput: trainData[startPosition:startPosition + self.batchSize],
+                    self.labelInput: trainLabel[startPosition:startPosition + self.batchSize]})
+                startPosition += self.batchSize
+
+                print('\rTrain %d/%d Loss = %f' % (startPosition, numpy.shape(trainData)[0], loss), end='')
+                file.write(str(loss) + '\n')
+                totalLoss += loss
+        return totalLoss
+
+    def Test(self, logName, testData, testLabel):
+        with open(logName, 'w') as file:
+            startPosition = 0
+
+            while startPosition < numpy.shape(testData)[0]:
+                batchData, batchLabel = testData[startPosition:startPosition + self.batchSize], \
+                                        testLabel[startPosition:startPosition + self.batchSize]
+                predict = self.session.run(fetches=self.parameters['Predict'], feed_dict={self.dataInput: batchData})
+
+                for index in range(len(predict)):
+                    file.write('%f,%f\n' % (numpy.argmax(batchLabel[index]), numpy.argmax(predict[index])))
+                startPosition += self.batchSize
+
+    def Train_Inbalance(self, logName):
+        trainData, trainLabel = Shuffle_Double(self.data, self.label)
+
+        with open(logName, 'w') as file:
+            startPosition = 0
+            totalLoss = 0.0
+            while startPosition < numpy.shape(trainData)[0]:
+                loss, _ = self.session.run(fetches=[self.parameters['Loss'], self.train], feed_dict={
+                    self.dataInput: trainData[startPosition:startPosition + self.batchSize],
+                    self.labelInput: trainLabel[startPosition:startPosition + self.batchSize]})
+                startPosition += self.batchSize
+
+                print('\rTrain %d/%d Loss = %f' % (startPosition, numpy.shape(trainData)[0], loss), end='')
+                file.write(str(loss) + '\n')
+                totalLoss += loss
+        return totalLoss
 
     def Valid(self):
-        pass
+        result = self.session.run(fetches=self.parameters['Loss'],
+                                  feed_dict={self.dataInput: self.data[0:self.batchSize],
+                                             self.labelInput: self.label[0:self.batchSize]})
+        print(result)
+        print(numpy.shape(result))

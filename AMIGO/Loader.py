@@ -15,7 +15,7 @@ def Loader(name, appoint):
         data = numpy.load(os.path.join(loadpath, filename))
         label = numpy.load(os.path.join(loadpath, filename.replace('_Data', '_Label')))
         # print(numpy.shape(data), numpy.shape(label))
-        print('Loading', filename)
+        # print('Loading', filename)
 
         if searchIndex == appoint:
             testData.extend(data)

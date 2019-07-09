@@ -16,8 +16,11 @@ def Shuffle_Double(a, b):
     return newA, newB
 
 
-def F1Score_Calculator(label, predict):
-    pass
+def F1Score_Calculator(matrix):
+    recall = matrix[1][1] / numpy.sum(matrix[1])
+    precision = (matrix[0][0] + matrix[1][1]) / numpy.sum(matrix)
+
+    return 2 * precision * recall / (precision + recall)
 
 
 def LabelPretreatment(label):
