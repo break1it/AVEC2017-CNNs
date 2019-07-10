@@ -4,8 +4,11 @@ import tensorflow
 from AMIGO.Loader import Loader
 from AMIGO.Tools import LabelPretreatment, F1Score_Calculator
 from AMIGO.Model.Model_RNN import BLSTM
+import multiprocessing as mp
+import time
 
-if __name__ == '__main__':
+
+def Treatment():
     for vector in range(17):
         for appoint in range(2, 41):
             if appoint in [8, 9, 12, 17, 18, 21, 22, 23, 24, 28, 33]: continue
@@ -47,3 +50,16 @@ if __name__ == '__main__':
                                                     data=trainData, label=trainLabel)
                             classifier.MiddleResult(logName=savepath + '-MiddleResult/Test-%04d' % episode,
                                                     data=testData, label=testLabel)
+
+
+if __name__ == '__main__':
+    processList = []
+
+    for index in range(2):
+        process = mp.Process(target=Treatment)
+        process.start()
+        processList.append(process)
+        time.sleep(5)
+
+    for process in processList:
+        process.join()

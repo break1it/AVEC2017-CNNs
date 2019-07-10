@@ -4,7 +4,7 @@ from AMIGO.Tools import F1Score_Calculator
 
 if __name__ == '__main__':
     for index in range(41):
-        loadpath = 'D:/PythonProjects_Data/AMIGO/ExperimentResult/BLSTM2Layer/Vector-01-Sample-%02d-Arousal-TestResult/' % index
+        loadpath = 'D:/PythonProjects_Data/AMIGO/ExperimentResult/BLSTM2Layer/Vector-05-Sample-%02d-Arousal-TestResult/' % index
         if not os.path.exists(loadpath): continue
         F1List, matrixList = [], []
         for filename in os.listdir(loadpath):

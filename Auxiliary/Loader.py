@@ -63,4 +63,4 @@ def Loader_SpeechRecognition(maxSentence=10):
 
 
 if __name__ == '__main__':
-    Loader_SpeechRecognition()
+    Loader_CNN(maxSentence=9999)
