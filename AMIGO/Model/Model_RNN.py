@@ -164,3 +164,36 @@ class BLSTM(NeuralNetwork_Base):
                                              self.labelInput: self.label[0:self.batchSize]})
         print(result)
         print(numpy.shape(result))
+
+    def MiddleResult(self, logName, data, label):
+        with open(logName + '-Label.csv', 'w') as file:
+            for indexX in range(numpy.shape(label)[0]):
+                for indexY in range(numpy.shape(label)[1]):
+                    if indexY != 0: file.write(',')
+                    file.write(str(label[indexX][indexY]))
+                file.write('\n')
+
+        with open(logName + '-FC.csv', 'w') as fileFC:
+            with open(logName + '-Predict.csv', 'w') as filePredict:
+                startPosition = 0
+
+                while startPosition < numpy.shape(data)[0]:
+                    batchData = data[startPosition:startPosition + self.batchSize]
+
+                    FCResult, PredictResult = self.session.run(
+                        fetches=[self.parameters['AttentionResult'], self.parameters['Predict']],
+                        feed_dict={self.dataInput: batchData})
+
+                    for indexX in range(numpy.shape(FCResult)[0]):
+                        for indexY in range(numpy.shape(FCResult)[1]):
+                            if indexY != 0: fileFC.write(',')
+                            fileFC.write(str(FCResult[indexX][indexY]))
+                        fileFC.write('\n')
+
+                    for indexX in range(numpy.shape(PredictResult)[0]):
+                        for indexY in range(numpy.shape(PredictResult)[1]):
+                            if indexY != 0: filePredict.write(',')
+                            filePredict.write(str(PredictResult[indexX][indexY]))
+                        filePredict.write('\n')
+
+                    startPosition += self.batchSize
