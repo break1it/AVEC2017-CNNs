@@ -1,11 +1,11 @@
 import numpy
 import os
-from AMIGO.Tools import F1Score_Calculator
+from AMIGO.Tools import F1Score_Calculator, Precision_Calculator
 
 if __name__ == '__main__':
     for index in range(41):
         for vector in range(17):
-            loadpath = 'D:/PythonProjects_Data/AMIGO/Experiment-Result-NN/Vector-%02d-Sample-%02d-Valence-TestResult/' % (
+            loadpath = 'D:/PythonProjects_Data/AMIGO/ExperimentResult/NN/Vector-%02d-Sample-%02d-Valence-TestResult/' % (
                 vector, index)
             if not os.path.exists(loadpath): continue
             F1List, PrecisionList, matrixList = [], [], []
@@ -27,5 +27,5 @@ if __name__ == '__main__':
             # print(max(F1List), numpy.argmax(F1List))
             # print(max(F1List))
 
-            print(max(F1List), numpy.argmax(F1List), end='\t')
+            print(max(PrecisionList), end='\t')
             if vector == 16: print()

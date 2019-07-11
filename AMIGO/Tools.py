@@ -23,6 +23,10 @@ def F1Score_Calculator(matrix):
     return 2 * precision * recall / (precision + recall)
 
 
+def Precision_Calculator(matrix):
+    return (matrix[0][0] + matrix[1][1]) / numpy.sum(matrix)
+
+
 def LabelPretreatment(label):
     returnLabel = []
     for sample in label:
