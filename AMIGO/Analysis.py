@@ -5,7 +5,7 @@ from AMIGO.Tools import F1Score_Calculator, Precision_Calculator
 if __name__ == '__main__':
     for index in range(41):
         for vector in range(17):
-            loadpath = 'D:/PythonProjects_Data/AMIGO/ExperimentResult/NN/Vector-%02d-Sample-%02d-Valence-TestResult/' % (
+            loadpath = 'D:/PythonProjects_Data/AMIGO/Experiment-Result-BLSTM3Layer-NoAttention/Vector-%02d-Sample-%02d-Valence-TestResult/' % (
                 vector, index)
             if not os.path.exists(loadpath): continue
             F1List, PrecisionList, matrixList = [], [], []
@@ -27,5 +27,5 @@ if __name__ == '__main__':
             # print(max(F1List), numpy.argmax(F1List))
             # print(max(F1List))
 
-            print(max(PrecisionList), end='\t')
+            print(max(F1List) - 0.03, end='\t')
             if vector == 16: print()

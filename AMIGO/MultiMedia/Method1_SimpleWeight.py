@@ -5,8 +5,8 @@ from AMIGO.Tools import F1Score_Calculator, Precision_Calculator
 if __name__ == '__main__':
     choosePart = 'Arousal'
 
-    datapath = 'D:/PythonProjects_Data/AMIGO/Experiment-MiddleResult/Experiment-Result-BLSTM1Layer-Step1-SoftMax-Normalization/'
-    labelpath = 'D:/PythonProjects_Data/AMIGO/Experiment-MiddleResult/Experiment-Result-BLSTM1Layer-Step2-Label/'
+    datapath = 'D:/PythonProjects_Data/AMIGO/Experiment-MiddleResult/Experiment-Result-NN-Step1-SoftMax-Normalization/'
+    labelpath = 'D:/PythonProjects_Data/AMIGO/Experiment-MiddleResult/Experiment-Result-NN-Step2-Label/'
 
     for index in range(41):
         if not os.path.exists(os.path.join(
@@ -29,5 +29,5 @@ if __name__ == '__main__':
         for index in range(len(testLabel)):
             matrix[testLabel[index]][totalPredict[index]] += 1
 
-        print(F1Score_Calculator(matrix))
+        print(F1Score_Calculator(matrix), '\t', Precision_Calculator(matrix))
         # exit()

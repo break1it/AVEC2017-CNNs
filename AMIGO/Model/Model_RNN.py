@@ -197,3 +197,42 @@ class BLSTM(NeuralNetwork_Base):
                         filePredict.write('\n')
 
                     startPosition += self.batchSize
+
+
+class BLSTM_NoAttention(BLSTM):
+    def __init__(self, trainData, trainLabel, batchSize=32, hiddenNodules=128, rnnLayers=2, learningRate=1E-3,
+                 startFlag=True, graphRevealFlag=True, graphPath='logs/', occupyRate=-1):
+        super(BLSTM_NoAttention, self).__init__(
+            trainData=trainData, trainLabel=trainLabel, batchSize=batchSize, hiddenNodules=hiddenNodules,
+            rnnLayers=rnnLayers, learningRate=learningRate, startFlag=startFlag, graphRevealFlag=graphRevealFlag,
+            graphPath=graphPath, occupyRate=occupyRate)
+
+    def BuildNetwork(self, learningRate):
+        self.dataInput = tensorflow.placeholder(dtype=tensorflow.float32, shape=[None, 20, 65], name='dataInput')
+        self.labelInput = tensorflow.placeholder(dtype=tensorflow.float32, shape=[None, 2], name='labelInput')
+
+        self.parameters['Cell_FW'] = tensorflow.nn.rnn_cell.MultiRNNCell(
+            cells=[rnn.LSTMCell(num_units=self.hiddenNodules) for _ in range(self.rnnLayers)], state_is_tuple=True)
+        self.parameters['Cell_BW'] = tensorflow.nn.rnn_cell.MultiRNNCell(
+            cells=[rnn.LSTMCell(num_units=self.hiddenNodules) for _ in range(self.rnnLayers)], state_is_tuple=True)
+
+        self.parameters['BLSTM_Output'], self.parameters['BLSTM_FinalState'] = \
+            tensorflow.nn.bidirectional_dynamic_rnn(
+                cell_fw=self.parameters['Cell_FW'], cell_bw=self.parameters['Cell_BW'],
+                inputs=self.dataInput, dtype=tensorflow.float32)
+        self.parameters['BLSTM_Result'] = tensorflow.concat(
+            [self.parameters['BLSTM_FinalState'][0][-1].h, self.parameters['BLSTM_FinalState'][1][-1].h], axis=1,
+            name='BLSTM_Result')
+
+        self.parameters['Predict'] = tensorflow.layers.dense(
+            inputs=self.parameters['BLSTM_Result'], units=2, activation=None, name='Predict')
+        self.parameters['Loss'] = tensorflow.losses.softmax_cross_entropy(
+            onehot_labels=self.labelInput, logits=self.parameters['Predict'], weights=10)
+        self.train = tensorflow.train.AdamOptimizer(learning_rate=learningRate).minimize(self.parameters['Loss'])
+
+    def Valid(self):
+        result = self.session.run(fetches=self.parameters['BLSTM_Result'],
+                                  feed_dict={self.dataInput: self.data[0:self.batchSize],
+                                             self.labelInput: self.label[0:self.batchSize]})
+        print(result)
+        print(numpy.shape(result))
