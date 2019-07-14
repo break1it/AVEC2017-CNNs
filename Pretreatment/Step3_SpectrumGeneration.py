@@ -11,7 +11,7 @@ def Extraction(loadpath, savepath, bands):
     hopLen = int(0.010 * secondRate)
     numberFFT = winLen
 
-    print(loadpath)
+    # print(loadpath)
     y, sr = librosa.load(loadpath, sr=secondRate)
 
     try:
@@ -34,9 +34,9 @@ def Extraction(loadpath, savepath, bands):
 
 if __name__ == '__main__':
     bands = 40
-    loadpath = 'D:/PythonProjects_Data/AVEC2017_Step2_VoiceSeparate/'
-    savepath = 'D:/PythonProjects_Data/AVEC2017_Step3_Spectrum/'
-    for foldA in os.listdir(loadpath)[2:3]:
+    loadpath = 'D:/PythonProjects_Data/AVEC2017_Data/Step2_VoiceSeparate/'
+    savepath = 'D:/PythonProjects_Data/AVEC2017_Data/Step3_Spectrum/'
+    for foldA in os.listdir(loadpath)[2:]:
         for foldB in os.listdir(os.path.join(loadpath, foldA))[100:]:
             print(foldA, foldB)
             if os.path.exists(os.path.join(savepath, foldA, foldB)): continue

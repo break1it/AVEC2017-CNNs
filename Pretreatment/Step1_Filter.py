@@ -4,7 +4,7 @@ import shutil
 
 if __name__ == '__main__':
     loadpath = 'D:/PythonProjects_Data/AVEC2017/'
-    savepath = 'D:/PythonProjects_Data/AVEC2017_Step1_Filter/'
+    savepath = 'D:/PythonProjects_Data/AVEC2017_Data/Step1_Filter/'
 
     for part in ['train', 'dev', 'test']:
         searchList = numpy.genfromtxt(fname=os.path.join(loadpath, '%s_split_Depression_AVEC2017.csv' % part),

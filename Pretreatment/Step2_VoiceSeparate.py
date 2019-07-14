@@ -3,8 +3,8 @@ from pydub import AudioSegment
 import numpy
 
 if __name__ == '__main__':
-    loadpath = 'D:/PythonProjects_Data/AVEC2017_Step1_Filter/'
-    savepath = 'D:/PythonProjects_Data/AVEC2017_Step2_VoiceSeparate/'
+    loadpath = 'D:/PythonProjects_Data/AVEC2017_Data/Step1_Filter/'
+    savepath = 'D:/PythonProjects_Data/AVEC2017_Data/Step2_VoiceSeparate/'
 
     for foldA in os.listdir(loadpath):
         for foldB in os.listdir(os.path.join(loadpath, foldA)):

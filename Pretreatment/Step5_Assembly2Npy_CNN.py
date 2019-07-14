@@ -5,9 +5,9 @@ MAX_SENTENCE = 128
 MAX_FRAME = 1000
 
 if __name__ == '__main__':
-    loadpath = 'D:/PythonProjects_Data/AVEC2017_Step4_Normalization_Part2/'
-    savepath = 'D:/PythonProjects_Data/Data_AVEC2017/CNN/'
-
+    loadpath = 'D:/PythonProjects_Data/AVEC2017_Data/Step4_Normalization_Part2/'
+    savepath = 'D:/PythonProjects_Data/Data_AVEC2017/CNN-100/'
+    # os.makedirs(savepath)
     for foldA in os.listdir(loadpath):
         os.makedirs(os.path.join(savepath, foldA))
         for foldB in os.listdir(os.path.join(loadpath, foldA)):
@@ -17,7 +17,7 @@ if __name__ == '__main__':
                 if numpy.shape(totalData)[0] >= MAX_SENTENCE: continue
 
                 loadData = numpy.genfromtxt(fname=os.path.join(loadpath, foldA, foldB, filename), dtype=float,
-                                            delimiter=',')
+                                            delimiter=',') * 100
 
                 if numpy.shape(loadData)[0] >= MAX_FRAME:
                     currentData = loadData[0:MAX_FRAME]

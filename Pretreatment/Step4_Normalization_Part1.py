@@ -2,8 +2,8 @@ import numpy
 import os
 
 if __name__ == '__main__':
-    loadpath = 'D:/PythonProjects_Data/AVEC2017_Step3_Spectrum/'
-    savepath = 'D:/PythonProjects_Data/AVEC2017_Step4_Normalization_Part1/'
+    loadpath = 'D:/PythonProjects_Data/AVEC2017_Data/Step3_Spectrum/'
+    savepath = 'D:/PythonProjects_Data/AVEC2017_Data/Step4_Normalization_Part1/'
 
     for foldA in os.listdir(loadpath)[2:]:
         # os.makedirs(os.path.join(savepath, foldA))

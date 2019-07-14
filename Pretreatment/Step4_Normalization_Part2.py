@@ -3,9 +3,9 @@ import os
 from sklearn.preprocessing import scale
 
 if __name__ == '__main__':
-    loadpath = 'D:/PythonProjects_Data/AVEC2017_Step4_Normalization_Part1/'
-    comparepath = 'D:/PythonProjects_Data/AVEC2017_Step3_Spectrum/'
-    savepath = 'D:/PythonProjects_Data/AVEC2017_Step4_Normalization_Part2/'
+    loadpath = 'D:/PythonProjects_Data/AVEC2017_Data/Step4_Normalization_Part1/'
+    comparepath = 'D:/PythonProjects_Data/AVEC2017_Data/Step3_Spectrum/'
+    savepath = 'D:/PythonProjects_Data/AVEC2017_Data/Step4_Normalization_Part2/'
 
     totalData = []
     for fold in os.listdir(loadpath):

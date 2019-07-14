@@ -2,8 +2,8 @@ import numpy
 import os
 
 
-def Loader_CNN(maxSentence=5):
-    loadPath = 'D:/PythonProjects_Data/Data_AVEC2017/CNN/'
+def Loader_CNN(partName, maxSentence=5):
+    loadPath = 'D:/PythonProjects_Data/Data_AVEC2017/%s/' % partName
     labelPath = 'D:/PythonProjects_Data/Data_AVEC2017/'
 
     trainData, trainLabel, developData, developLabel, testData, testLabel = [], [], [], [], [], []
