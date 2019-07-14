@@ -1,13 +1,13 @@
 import numpy
 import tensorflow
 from Model.Base import NeuralNetwork_Base
-from Model.AttentionMechanism.CNN_StandardAttention import StandardAttentionInitializer
 from Auxiliary.Shuffle import Shuffle_Double
 
 
 class SimpleCNN_3Layers(NeuralNetwork_Base):
-    def __init__(self, trainData, trainLabel, learningRate=1E-3, startFlag=True, graphRevealFlag=True,
-                 graphPath='logs/', occupyRate=-1):
+    def __init__(self, trainData, trainLabel, attention, attentionScope, attentionName, learningRate=1E-3,
+                 startFlag=True, graphRevealFlag=True, graphPath='logs/', occupyRate=-1):
+        self.attention, self.attentionScope, self.attentioName = attention, attentionScope, attentionName
         super(SimpleCNN_3Layers, self).__init__(
             trainData=trainData, trainLabel=trainLabel, batchSize=None, learningRate=learningRate,
             startFlag=startFlag, graphRevealFlag=graphRevealFlag, graphPath=graphPath, occupyRate=occupyRate)
@@ -40,8 +40,9 @@ class SimpleCNN_3Layers(NeuralNetwork_Base):
             inputs=self.parameters['Layer3rd_Conv'], pool_size=3, strides=[2, 2], padding='SAME',
             name='Layer3rd_MaxPooling')
 
-        self.attentionList = StandardAttentionInitializer(
-            inputData=self.parameters['Layer3rd_MaxPooling'], scopeName='SA', hiddenNoduleNumbers=16)
+        self.attentionList = self.attention(
+            inputData=self.parameters['Layer3rd_MaxPooling'], attentionScope=self.attentionScope,
+            scopeName=self.attentioName)
 
         self.parameters['AttentionResult'] = self.attentionList['FinalResult']
         self.parameters['AttentionResultReshape'] = tensorflow.reshape(
@@ -81,8 +82,8 @@ class SimpleCNN_3Layers(NeuralNetwork_Base):
                 print('\rTesting %d/%d' % (index, numpy.shape(testData)[0]), end='')
 
     def Valid(self):
-        result = self.session.run(fetches=self.parameters['Predict'],
+        result = self.session.run(fetches=self.parameters['AttentionResult'],
                                   feed_dict={self.dataInput: self.data[0],
                                              self.labelInput: numpy.reshape(self.label[0], [-1, 1])})
         print(numpy.shape(result))
-        print(result)
+        # print(result)

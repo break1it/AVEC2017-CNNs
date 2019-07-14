@@ -1,7 +1,7 @@
 import tensorflow
 
 
-def StandardAttentionInitializer(inputData, scopeName, hiddenNoduleNumbers):
+def CNN_StandardAttentionInitializer(inputData, attentionScope, scopeName='CSA'):
     with tensorflow.name_scope(scopeName):
         networkParameter = {}
 

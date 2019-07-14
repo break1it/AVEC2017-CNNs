@@ -1,7 +1,7 @@
 import tensorflow
 
 
-def CNN_LocalAttentionInitializer(inputData, scopeName, hiddenNoduleNumbers):
+def CNN_LocalAttentionInitializer(inputData, attentionScope, scopeName='CSA'):
     with tensorflow.name_scope(scopeName):
         networkParameter = {}
 
@@ -10,27 +10,27 @@ def CNN_LocalAttentionInitializer(inputData, scopeName, hiddenNoduleNumbers):
         networkParameter['HiddenNoduleNumber'] = tensorflow.unstack(
             tensorflow.shape(networkParameter['DataInput'], name='Shape'))
 
-        networkParameter['AttentionWeight_Flat'] = tensorflow.layers.dense(
-            inputs=networkParameter['DataInput'], units=1, activation=tensorflow.nn.tanh, name='AttentionWeight_Flat')
+        networkParameter['AttentionWeight'] = tensorflow.layers.conv2d(
+            inputs=networkParameter['DataInput'], filters=1, kernel_size=attentionScope, strides=[1, 1], padding='SAME',
+            name='AttentionWeight', kernel_initializer=tensorflow.random_normal_initializer(mean=0.0, stddev=0.1))
         networkParameter['AttentionWeight_Reshape'] = tensorflow.reshape(
-            tensor=networkParameter['AttentionWeight_Flat'],
-            shape=[networkParameter['BatchSize'], networkParameter['XScope'] * networkParameter['YScope']],
+            tensor=networkParameter['AttentionWeight'], shape=[networkParameter['BatchSize'], -1, 1],
             name='AttentionWeight_Reshape')
         networkParameter['AttentionWeight_SoftMax'] = tensorflow.nn.softmax(
-            logits=networkParameter['AttentionWeight_Reshape'], name='AttentionWeight_SoftMax')
-        networkParameter['AttentionWeight_OriginSize'] = tensorflow.reshape(
+            networkParameter['AttentionWeight_Reshape'], name='AttentionWeight_SoftMax')
+        networkParameter['AttentionWeight_OriginShape'] = tensorflow.reshape(
             tensor=networkParameter['AttentionWeight_SoftMax'],
             shape=[networkParameter['BatchSize'], networkParameter['XScope'], networkParameter['YScope'], 1],
-            name='AttentionWeight_OriginSize')
+            name='AttentionWeight_OriginShape')
         networkParameter['AttentionWeight_Tile'] = tensorflow.tile(
-            input=networkParameter['AttentionWeight_OriginSize'], multiples=[1, 1, 1, hiddenNoduleNumbers],
-            name='AttentionWeight_Tile')
+            input=networkParameter['AttentionWeight_OriginShape'],
+            multiples=[1, 1, 1, networkParameter['HiddenNoduleNumber']], name='AttentionWeight_Tile')
 
-        networkParameter['Result_MultiplyAttention'] = tensorflow.multiply(
-            networkParameter['DataInput'], networkParameter['AttentionWeight_Tile'], name='Result_MultiplyAttention')
-        networkParameter['AssemblyMedia'] = tensorflow.reduce_sum(
-            input_tensor=networkParameter['Result_MultiplyAttention'], axis=2, name='AssemblyMedia')
+        networkParameter['Data_AddAttention_Raw'] = tensorflow.multiply(
+            networkParameter['DataInput'], networkParameter['AttentionWeight_Tile'], name='Data_AddAttention_Raw')
+        networkParameter['Data_AddAttention_ReduceSum'] = tensorflow.reduce_sum(
+            input_tensor=networkParameter['Data_AddAttention_Raw'], axis=2, name='Data_AddAttention_ReduceSum')
         networkParameter['FinalResult'] = tensorflow.reduce_sum(
-            input_tensor=networkParameter['AssemblyMedia'], axis=1, name='FinalResult')
+            input_tensor=networkParameter['Data_AddAttention_ReduceSum'], axis=1, name='FinalResult')
 
     return networkParameter
