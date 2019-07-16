@@ -1,15 +1,17 @@
 import numpy
 import os
 import matplotlib.pylab as plt
+import random
 
 if __name__ == '__main__':
-    loadpath = r'D:\PythonProjects_Data\Experiment\SimpleCNN-10-Layer3'
-    totalData = []
-    for index in range(100):
-        data = numpy.genfromtxt(fname=os.path.join(loadpath, '%04d.csv' % index), dtype=float, delimiter=',')
-        totalData.append(numpy.average(data))
-    plt.plot(totalData)
-    plt.xlabel('Train Episode')
-    plt.ylabel('Loss')
-    plt.title('Loss Function')
-    plt.show()
+    data = numpy.genfromtxt(fname=r'D:\Workings\Input.csv', dtype=float, delimiter=',')
+    # print(data)
+    with open(r'D:\Workings\Output.csv', 'w') as file:
+        for indexX in range(numpy.shape(data)[0]):
+            for indexY in range(numpy.shape(data)[1]):
+                if indexY != 0: file.write(',')
+                current = (random.random() - 0.5)
+                print(current, end='\t')
+                file.write(str(data[indexX][indexY] + current) + '%')
+            print()
+            file.write('\n')
