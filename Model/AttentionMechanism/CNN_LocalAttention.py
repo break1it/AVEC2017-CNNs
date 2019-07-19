@@ -1,7 +1,7 @@
 import tensorflow
 
 
-def CNN_LocalAttentionInitializer(inputData, attentionScope, scopeName='CSA'):
+def CNN_LocalAttentionInitializer(inputData, attentionScope, hiddenNoduleNumber, scopeName='CSA'):
     with tensorflow.name_scope(scopeName):
         networkParameter = {}
 
@@ -32,5 +32,6 @@ def CNN_LocalAttentionInitializer(inputData, attentionScope, scopeName='CSA'):
             input_tensor=networkParameter['Data_AddAttention_Raw'], axis=2, name='Data_AddAttention_ReduceSum')
         networkParameter['FinalResult'] = tensorflow.reduce_sum(
             input_tensor=networkParameter['Data_AddAttention_ReduceSum'], axis=1, name='FinalResult')
+        networkParameter['FinalResult'].set_shape([None, hiddenNoduleNumber])
 
     return networkParameter

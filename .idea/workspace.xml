@@ -3,17 +3,41 @@
   <component name="ChangeListManager">
     <list default="true" id="2d64badc-8a89-446e-93d7-bf3a90bb3e1c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LIDC_Again/Pretreatment/Analysis.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AMIGO/Analysis.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AMIGO/Experiment/Experiment_BLSTM.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AMIGO/Experiment/Experiment_BLSTM_NoAttention.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AMIGO/Experiment/Experiment_CNN.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AMIGO/Experiment/Experiment_NN.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AMIGO/Loader.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AMIGO/Lost/DataPretreatment.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AMIGO/Lost/Step1_Convert2Matrix.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AMIGO/Lost/Step2_Assembly2Npy.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AMIGO/Lost/Step3_Normalization.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AMIGO/Lost/Step4_Split.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AMIGO/Model/Model_CNN.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AMIGO/Model/Model_CRNN.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AMIGO/Model/Model_NN.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AMIGO/Model/Model_RNN.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AMIGO/MultiMedia/MM_Analysis.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AMIGO/MultiMedia/Method1_SimpleWeight.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AMIGO/MultiMedia/Method2_DynamicWeight.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AMIGO/MultiMedia/Step1_SoftMax_Normalization.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AMIGO/MultiMedia/Step2_LabelCopy.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AMIGO/MultiMedia/Step3_Concat.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AMIGO/Pretreatment/CNNTreatment/Step2_Normalization.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AMIGO/Pretreatment/CNNTreatment/Step3_Split.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AMIGO/Pretreatment/CNNTreatment/Step4_Assembly.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AMIGO/Pretreatment/Step2_SpectrumGeneration.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AMIGO/Pretreatment/Step3_Normalization.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AMIGO/Pretreatment/Step4_Split.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AMIGO/Pretreatment/Step5_LabelCopy.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AMIGO/Pretreatment/Step6_Assembly2Npy.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AMIGO/Reveal.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AMIGO/Tools.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AMIGO/Visualization.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/AttentionMechanism/CNN_LocalAttention.py" beforeDir="false" afterPath="$PROJECT_DIR$/Model/AttentionMechanism/CNN_LocalAttention.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/AttentionMechanism/CNN_StandardAttention.py" beforeDir="false" afterPath="$PROJECT_DIR$/Model/AttentionMechanism/CNN_StandardAttention.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/HACN.py" beforeDir="false" afterPath="$PROJECT_DIR$/Model/HACN.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pretreatment/Step1_Filter.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pretreatment/SpectrumFeatures/Step1_Filter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pretreatment/Step2_VoiceSeparate.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pretreatment/SpectrumFeatures/Step2_VoiceSeparate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pretreatment/Step3_OpenSmileFeatureGeneration.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pretreatment/SpectrumFeatures/Step3_OpenSmileFeatureGeneration.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pretreatment/Step3_SpectrumGeneration.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pretreatment/SpectrumFeatures/Step3_SpectrumGeneration.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pretreatment/Step4_Normalization_OpenSmileFeature.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pretreatment/SpectrumFeatures/Step4_Normalization_OpenSmileFeature.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pretreatment/Step4_Normalization_Part1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pretreatment/SpectrumFeatures/Step4_Normalization_Part1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pretreatment/Step4_Normalization_Part2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pretreatment/SpectrumFeatures/Step4_Normalization_Part2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pretreatment/Step5_Assembly2Npy_CNN.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pretreatment/SpectrumFeatures/Step5_Assembly2Npy_CNN.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pretreatment/Step5_Assembly2Npy_HBLSTM.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pretreatment/SpectrumFeatures/Step5_Assembly2Npy_HBLSTM.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RunProgram/Exp_HACN.py" beforeDir="false" afterPath="$PROJECT_DIR$/RunProgram/Exp_HACN.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,49 +49,56 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Pretreatment/OtherFeatures/Step1_Features_FORMANT.py">
+        <entry file="file://$PROJECT_DIR$/RunProgram/Exp_HACN.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+            <state relative-caret-position="674">
+              <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
               <folding>
-                <element signature="e#0#12#0" expanded="true" />
+                <element signature="e#0#9#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Pretreatment/OtherFeatures/Step3_Assembly.py">
+        <entry file="file://$PROJECT_DIR$/Model/AttentionMechanism/RNN_StandardAttention.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="4" column="68" selection-start-line="4" selection-start-column="68" selection-end-line="4" selection-end-column="75" />
-              <folding>
-                <element signature="e#0#12#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Pretreatment/OtherFeatures/Step4_Normalization.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="10" lean-forward="true" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="19" />
-              <folding>
-                <element signature="e#0#12#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="315">
+              <caret line="56" column="24" lean-forward="true" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Pretreatment/OtherFeatures/Step5_Assembly2Npy.py">
+        <entry file="file://$PROJECT_DIR$/Model/HACN.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="506">
+              <caret line="72" column="65" selection-start-line="72" selection-start-column="65" selection-end-line="72" selection-end-column="65" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Model/SimpleCNN.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="352">
-              <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+              <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="53" selection-end-column="113" />
               <folding>
-                <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#0#12#0" expanded="true" />
+                <element signature="e#5145#8273#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Model/Base.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="39" selection-start-line="39" selection-end-line="39" />
             </state>
           </provider>
         </entry>
@@ -87,6 +118,7 @@
       <find>self</find>
       <find>20</find>
       <find>\</find>
+      <find>set</find>
     </findStrings>
     <replaceStrings>
       <replace>/</replace>
@@ -98,7 +130,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/AMIGO/MultiMedia/Method1_SimpleWeight.py" />
         <option value="$PROJECT_DIR$/AMIGO/MultiMedia/Step4_Assembly.py" />
         <option value="$PROJECT_DIR$/AMIGO/MultiMedia/Step3_Concat.py" />
         <option value="$PROJECT_DIR$/AMIGO/MultiMedia/Method2_DynamicWeight.py" />
@@ -110,7 +141,6 @@
         <option value="$PROJECT_DIR$/AMIGO/Pretreatment/CNNTreatment/Step4_Assembly.py" />
         <option value="$PROJECT_DIR$/AMIGO/Model/Model_CNN.py" />
         <option value="$PROJECT_DIR$/AMIGO/Experiment/Experiment_CNN.py" />
-        <option value="$PROJECT_DIR$/AMIGO/Analysis.py" />
         <option value="$PROJECT_DIR$/Pretreatment/Step1_Filter.py" />
         <option value="$PROJECT_DIR$/Pretreatment/Step2_VoiceSeparate.py" />
         <option value="$PROJECT_DIR$/Pretreatment/Step3_SpectrumGeneration.py" />
@@ -118,8 +148,6 @@
         <option value="$PROJECT_DIR$/Pretreatment/Step4_Normalization_Part2.py" />
         <option value="$PROJECT_DIR$/Pretreatment/Step5_Assembly2Npy_CNN.py" />
         <option value="$PROJECT_DIR$/Auxiliary/Loader.py" />
-        <option value="$PROJECT_DIR$/Model/AttentionMechanism/CNN_LocalAttention.py" />
-        <option value="$PROJECT_DIR$/Model/AttentionMechanism/CNN_StandardAttention.py" />
         <option value="$PROJECT_DIR$/RunProgram/Exp_SimpleCNN.py" />
         <option value="$PROJECT_DIR$/LossFunction.py" />
         <option value="$PROJECT_DIR$/LIDC_Again/Pretreatment/Step0_DictionaryGeneration.py" />
@@ -135,8 +163,6 @@
         <option value="$PROJECT_DIR$/AMIGO/test.py" />
         <option value="$PROJECT_DIR$/Test.py" />
         <option value="$PROJECT_DIR$/BestChoose.py" />
-        <option value="$PROJECT_DIR$/RunProgram/Exp_HACN.py" />
-        <option value="$PROJECT_DIR$/Model/HACN.py" />
         <option value="$PROJECT_DIR$/LIDC_Again/Tools.py" />
         <option value="$PROJECT_DIR$/LIDC_Again/Visualiziation.py" />
         <option value="$PROJECT_DIR$/Pretreatment/OtherFeatures/Searcher.py" />
@@ -149,6 +175,12 @@
         <option value="$PROJECT_DIR$/Pretreatment/OtherFeatures/Step3_Assembly.py" />
         <option value="$PROJECT_DIR$/Pretreatment/OtherFeatures/Step4_Normalization.py" />
         <option value="$PROJECT_DIR$/Pretreatment/OtherFeatures/Step5_Assembly2Npy.py" />
+        <option value="$PROJECT_DIR$/AMIGO/Analysis.py" />
+        <option value="$PROJECT_DIR$/AMIGO/文档.txt" />
+        <option value="$PROJECT_DIR$/Model/AttentionMechanism/CNN_StandardAttention.py" />
+        <option value="$PROJECT_DIR$/Model/AttentionMechanism/CNN_LocalAttention.py" />
+        <option value="$PROJECT_DIR$/RunProgram/Exp_HACN.py" />
+        <option value="$PROJECT_DIR$/Model/HACN.py" />
       </list>
     </option>
   </component>
@@ -176,13 +208,18 @@
             <path>
               <item name="AVEC2017-CNNs" type="b2602c69:ProjectViewProjectNode" />
               <item name="AVEC2017-CNNs" type="462c0819:PsiDirectoryNode" />
-              <item name="Pretreatment" type="462c0819:PsiDirectoryNode" />
+              <item name="Model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AVEC2017-CNNs" type="b2602c69:ProjectViewProjectNode" />
               <item name="AVEC2017-CNNs" type="462c0819:PsiDirectoryNode" />
-              <item name="Pretreatment" type="462c0819:PsiDirectoryNode" />
-              <item name="OtherFeatures" type="462c0819:PsiDirectoryNode" />
+              <item name="Model" type="462c0819:PsiDirectoryNode" />
+              <item name="AttentionMechanism" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AVEC2017-CNNs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AVEC2017-CNNs" type="462c0819:PsiDirectoryNode" />
+              <item name="RunProgram" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -194,22 +231,23 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/RunProgram" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/AMIGO/Pretreatment" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="configurable.group.language" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\PythonProjects\AVEC2017-CNNs\RunProgram" />
-      <recent name="D:\PythonProjects\AVEC2017-CNNs\AMIGO\Experiment" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\PythonProjects\AVEC2017-CNNs\AMIGO\Pretreatment" />
       <recent name="D:\PythonProjects\AVEC2017-CNNs\Pretreatment\SpectrumFeatures" />
       <recent name="D:\PythonProjects\AVEC2017-CNNs\AMIGO\Pretreatment\SpectrumTreatment" />
       <recent name="D:\PythonProjects\AVEC2017-CNNs\AMIGO\Experiment" />
       <recent name="D:\PythonProjects\AVEC2017-CNNs\AMIGO\Model" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\PythonProjects\AVEC2017-CNNs\AMIGO\Pretreatment" />
+      <recent name="D:\PythonProjects\AVEC2017-CNNs\RunProgram" />
+      <recent name="D:\PythonProjects\AVEC2017-CNNs\AMIGO\Experiment" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -224,7 +262,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Step5_Assembly2Npy">
+  <component name="RunManager" selected="Python.Exp_HACN">
+    <configuration name="Exp_HACN" type="PythonConfigurationType" factoryName="Python" singleton="false" temporary="true">
+      <module name="AVEC2017-CNNs" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Anaconda3\envs\tensorflow\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/RunProgram" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RunProgram/Exp_HACN.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Step1_Features_FORMANT" type="PythonConfigurationType" factoryName="Python" singleton="false" temporary="true">
       <module name="AVEC2017-CNNs" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -239,28 +299,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Pretreatment/OtherFeatures/Step1_Features_FORMANT.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Step2_DelEmpty" type="PythonConfigurationType" factoryName="Python" singleton="false" temporary="true">
-      <module name="AVEC2017-CNNs" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Anaconda3\envs\tensorflow\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Pretreatment/OtherFeatures" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Pretreatment/OtherFeatures/Step2_DelEmpty.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -358,19 +396,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.Step2_DelEmpty" />
       <item itemvalue="Python.Step3_Assembly" />
       <item itemvalue="Python.Step4_Normalization" />
       <item itemvalue="Python.Step5_Assembly2Npy" />
       <item itemvalue="Python.Step1_Features_FORMANT" />
+      <item itemvalue="Python.Exp_HACN" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Exp_HACN" />
         <item itemvalue="Python.Step5_Assembly2Npy" />
         <item itemvalue="Python.Step4_Normalization" />
         <item itemvalue="Python.Step3_Assembly" />
         <item itemvalue="Python.Step1_Features_FORMANT" />
-        <item itemvalue="Python.Step2_DelEmpty" />
       </list>
     </recent_temporary>
   </component>
@@ -422,11 +460,12 @@
       <workItem from="1563255573175" duration="8742000" />
       <workItem from="1563411901293" duration="26470000" />
       <workItem from="1563444959062" duration="2665000" />
+      <workItem from="1563498480545" duration="6201000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="304029000" />
+    <option name="totallyTimeSpent" value="310230000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -480,8 +519,8 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/AVEC2017_CNNs$Step5_FinalExtraction.coverage" NAME="Step5_FinalExtraction Coverage Results" MODIFIED="1563101868683" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LIDC_Again/Pretreatment" />
-    <SUITE FILE_PATH="coverage/AVEC2017_CNNs$Exp_HACN.coverage" NAME="Exp_HACN Coverage Results" MODIFIED="1563288541205" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/RunProgram" />
     <SUITE FILE_PATH="coverage/AVEC2017_CNNs$Step1_Features_AU.coverage" NAME="Step1_Features_AU Coverage Results" MODIFIED="1563431921613" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Pretreatment/OtherFeatures" />
+    <SUITE FILE_PATH="coverage/AVEC2017_CNNs$Exp_HACN.coverage" NAME="Exp_HACN Coverage Results" MODIFIED="1563504729166" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/RunProgram" />
     <SUITE FILE_PATH="coverage/AVEC2017_CNNs$test.coverage" NAME="test Coverage Results" MODIFIED="1563202373140" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AMIGO" />
     <SUITE FILE_PATH="coverage/AVEC2017_CNNs$Step1_Features_FORMANT.coverage" NAME="Step1_Features_FORMANT Coverage Results" MODIFIED="1563439975084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Pretreatment/OtherFeatures" />
     <SUITE FILE_PATH="coverage/AVEC2017_CNNs$Analysis.coverage" NAME="Analysis Coverage Results" MODIFIED="1563161611908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LIDC_Again/Pretreatment" />
@@ -540,245 +579,6 @@
     <SUITE FILE_PATH="coverage/AVEC2017_CNNs$Step4_Split.coverage" NAME="Step4_Split Coverage Results" MODIFIED="1562550731250" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AMIGO/Pretreatment" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/AMIGO/Pretreatment/SpectrumTreatment/Step2_SpectrumGeneration.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-160">
-          <caret line="7" column="44" lean-forward="true" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AMIGO/Pretreatment/CNNTreatment/Step2_Normalization.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AMIGO/Pretreatment/CNNTreatment/Step3_Split.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AMIGO/Pretreatment/CNNTreatment/Step4_Assembly.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="9" column="37" lean-forward="true" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AMIGO/Experiment/Experiment_BLSTM_NoAttention.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="25" column="69" selection-start-line="10" selection-start-column="4" selection-end-line="25" selection-end-column="69" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AMIGO/Model/Model_RNN.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2016">
-          <caret line="141" column="47" selection-start-line="141" selection-start-column="47" selection-end-line="141" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-            <element signature="e#223#3779#0" />
-            <element signature="e#4858#6505#0" />
-            <element signature="e#8425#9199#0" />
-            <element signature="e#9230#9528#0" />
-            <element signature="e#9588#11139#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AMIGO/Model/Model_NN.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="5" column="19" lean-forward="true" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AMIGO/Experiment/Experiment_NN.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="5" column="38" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AMIGO/Model/Model_CNN.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="23" column="41" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-            <element signature="e#310#1049#0" />
-            <element signature="e#1101#3952#0" />
-            <element signature="e#3992#5120#0" />
-            <element signature="e#5180#5822#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AMIGO/Analysis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
-          <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AMIGO/Experiment/Experiment_CNN.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Auxiliary/Loader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="5" column="68" selection-start-line="5" selection-start-column="68" selection-end-line="5" selection-end-column="68" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-            <element signature="e#1722#2806#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LossFunction.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="10" column="23" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Model/AttentionMechanism/CNN_LocalAttention.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="3" column="59" selection-start-line="3" selection-start-column="59" selection-end-line="3" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Model/AttentionMechanism/CNN_StandardAttention.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-288">
-          <caret line="3" column="62" selection-start-line="3" selection-start-column="62" selection-end-line="3" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LIDC_Again/Pretreatment/Step0_DictionaryGeneration.py" />
-    <entry file="file://$PROJECT_DIR$/LIDC_Again/Pretreatment/Step1_DOI_Records.py" />
-    <entry file="file://$PROJECT_DIR$/LIDC_Again/Pretreatment/Step2_MediaPositionGeneration.py" />
-    <entry file="file://$PROJECT_DIR$/LIDC_Again/Pretreatment/Step3_MultiDecision.py" />
-    <entry file="file://$PROJECT_DIR$/LIDC_Again/Pretreatment/Step4_MultiDecision.py" />
-    <entry file="file://$PROJECT_DIR$/LIDC_Again/Pretreatment/Step5_FinalExtraction.py" />
-    <entry file="file://$PROJECT_DIR$/LIDC_Again/Pretreatment/Step5_FinalExtraction_Seperate.py" />
-    <entry file="file://$PROJECT_DIR$/AMIGO/MultiMedia/MM_Analysis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AMIGO/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="50" selection-start-line="50" selection-end-line="50" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BestChoose.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#78#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Model/CNN_EncoderDecoder_SR.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RunProgram/Exp_SimpleCNN.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="25" lean-forward="true" selection-end-line="29" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RunProgram/Exp_NetworkTest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="9" column="37" lean-forward="true" selection-end-line="29" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Model/SimpleCNN.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
-          <caret line="69" selection-start-line="69" selection-end-line="69" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-            <element signature="e#5145#8273#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RunProgram/Exp_HACN.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LIDC_Again/Pretreatment/Analysis.py" />
     <entry file="file://$PROJECT_DIR$/LIDC_Again/Tools.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -797,16 +597,6 @@
           <folding>
             <element signature="e#0#12#0" expanded="true" />
             <element signature="e#331#1884#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Model/HACN.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="46" column="46" lean-forward="true" selection-start-line="46" selection-start-column="46" selection-end-line="46" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -943,7 +733,7 @@
     <entry file="file://$PROJECT_DIR$/Pretreatment/OtherFeatures/Step4_Normalization.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
-          <caret line="10" lean-forward="true" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="19" />
+          <caret line="10" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="19" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
@@ -956,6 +746,248 @@
           <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AMIGO/Lost/DataPretreatment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3398" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AMIGO/Pretreatment/Step2_SpectrumGeneration.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="13" lean-forward="true" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AMIGO/Lost/Step1_Convert2Matrix.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AMIGO/Pretreatment/Step1_Convert2Matrix.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AMIGO/Pretreatment/Step3_Normalization.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AMIGO/Pretreatment/Step4_Split.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-480" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AMIGO/Pretreatment/Step5_LabelCopy.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AMIGO/Pretreatment/Step6_Assembly2Npy.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AMIGO/Experiment/Experiment_BLSTM_NoAttention.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AMIGO/Experiment/Experiment_BLSTM.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="9" lean-forward="true" selection-start-column="9" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AMIGO/Experiment/Experiment_CNN.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AMIGO/Experiment/Experiment_NN.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AMIGO/MultiMedia/Method2_DynamicWeight.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1542">
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AMIGO/MultiMedia/Method1_SimpleWeight.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-294">
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AMIGO/MultiMedia/Step2_LabelCopy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AMIGO/Loader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AMIGO/Reveal.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AMIGO/Visualization.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="512">
+          <caret line="40" column="30" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AMIGO/MultiMedia/MM_Analysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AMIGO/Tools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AMIGO/文档.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1216">
+          <caret line="38" column="35" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AMIGO/Analysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="928">
+          <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/Base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/AttentionMechanism/CNN_LocalAttention.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="602">
+          <caret line="34" column="77" selection-start-line="34" selection-start-column="77" selection-end-line="34" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/AttentionMechanism/CNN_StandardAttention.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="31" column="92" lean-forward="true" selection-start-line="31" selection-start-column="92" selection-end-line="32" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/AttentionMechanism/RNN_StandardAttention.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="56" column="24" lean-forward="true" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RunProgram/Exp_HACN.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="674">
+          <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RunProgram/Exp_SimpleCNN.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-262">
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/SimpleCNN.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="53" selection-end-column="113" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+            <element signature="e#5145#8273#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/HACN.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="72" column="65" selection-start-line="72" selection-start-column="65" selection-end-line="72" selection-end-column="65" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
           </folding>
         </state>
       </provider>
