@@ -19,10 +19,21 @@ if __name__ == '__main__':
     secondAttentionScope = None
     secondAttentionName = 'RSA'
 
+    concatType = 'FC'
+
+    savepath = 'D:/PythonProjects_Data/Experiment/%s-%s-%s' % (concatType, firstAttentionName, secondAttentionName)
+    os.makedirs(savepath)
+    os.makedirs(savepath + '-TestResult')
+
     classifier = HACN(
         trainData=numpy.concatenate([trainData, developData], axis=0),
         trainLabel=numpy.concatenate([trainLabel, developLabel], axis=0),
         firstAttention=firstAttention, firstAttentionName=firstAttentionName, firstAttentionScope=firstAttentionScope,
         secondAttention=secondAttention, secondAttentionName=secondAttentionName,
-        secondAttentionScope=secondAttentionScope, middleLayer='None')
-    classifier.Valid()
+        secondAttentionScope=secondAttentionScope, middleLayer=concatType)
+
+    for episode in range(100):
+        print('\nTrain Episode %d Total Loss = %f' % (
+            episode, classifier.Train(logName=savepath + '/Loss-%04d.csv' % episode)))
+        classifier.Save(savepath=savepath + '/Network-%04d' % episode)
+        classifier.Test(logName=savepath + '-TestResult/%04d.csv' % episode, testData=testData, testLabel=testLabel)

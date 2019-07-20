@@ -74,4 +74,31 @@ class HACN(NeuralNetwork_Base):
                                   feed_dict={self.dataInput: self.data[0],
                                              self.labelInput: numpy.reshape(self.label[0], [-1, 1])})
         print(numpy.shape(result))
-        # print(result)
+        print(result)
+
+    def Train(self, logName):
+        trainData, trainLabel = Shuffle_Double(self.data, self.label)
+
+        totalLoss = 0.0
+        with open(logName, 'w') as file:
+            for index in range(numpy.shape(trainData)[0]):
+                loss, _ = self.session.run(
+                    fetches=[self.parameters['Loss'], self.train],
+                    feed_dict={self.dataInput: trainData[index],
+                               self.labelInput: numpy.reshape(trainLabel[index], [-1, 1])})
+                file.write(str(loss) + '\n')
+                totalLoss += loss
+
+                print('\rTraining %d/%d Loss = %f' % (index, numpy.shape(trainData)[0], loss), end='')
+
+        return totalLoss
+
+    def Test(self, logName, testData, testLabel):
+        with open(logName, 'w') as file:
+            for index in range(numpy.shape(testData)[0]):
+                predict = self.session.run(
+                    fetches=self.parameters['Predict'],
+                    feed_dict={self.dataInput: testData[index]})
+
+                file.write(str(predict[0][0]) + ',' + str(testLabel[index]) + '\n')
+                print('\rTesting %d/%d' % (index, numpy.shape(testData)[0]), end='')
