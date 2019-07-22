@@ -4,6 +4,8 @@ from tensorflow.contrib import rnn
 from Model.Base import NeuralNetwork_Base
 from Auxiliary.Shuffle import Shuffle_Double
 
+PRETRAINED_SCOPE = {'CSA': 26, 'CLA': 26}
+
 
 class CRNN(NeuralNetwork_Base):
     def __init__(self, trainData, trainLabel, firstAttention, firstAttentionScope, firstAttentionName, secondAttention,
@@ -41,6 +43,15 @@ class CRNN(NeuralNetwork_Base):
             hiddenNoduleNumber=64, scopeName=self.firstAttentionName)
         self.parameters['FirstAttentionResult'] = self.parameters['FirstAttentionList']['FinalResult']
 
+        self.parameters['FirstAttentionResult_Reshape'] = tensorflow.reshape(
+            tensor=self.parameters['FirstAttentionResult'], shape=[-1, 128 * 64], name='FirstAttentionResult_Reshape')
+        self.parameters['Predict_Part'] = tensorflow.layers.dense(
+            inputs=self.parameters['FirstAttentionResult_Reshape'], units=1, activation=None, name='Predict_Part')
+        self.parameters['Loss_Part'] = tensorflow.losses.huber_loss(
+            labels=self.labelInput, predictions=self.parameters['Predict_Part'])
+        self.trainPart = tensorflow.train.AdamOptimizer(learning_rate=learningRate).minimize(
+            self.parameters['Loss_Part'])
+
         self.parameters['BLSTM_FW_Cell'] = tensorflow.nn.rnn_cell.MultiRNNCell(
             cells=[rnn.LSTMCell(num_units=self.hiddenNoduleNumber) for _ in range(self.rnnLayers)], state_is_tuple=True)
         self.parameters['BLSTM_BW_Cell'] = tensorflow.nn.rnn_cell.MultiRNNCell(
@@ -55,27 +66,37 @@ class CRNN(NeuralNetwork_Base):
             hiddenNoduleNumber=2 * self.hiddenNoduleNumber, attentionScope=self.secondAttentionScope, blstmFlag=True)
         self.parameters['SecondAttentionResult'] = self.parameters['SecondAttention']['FinalResult']
 
-        self.parameters['Predict'] = tensorflow.layers.dense(
-            inputs=self.parameters['SecondAttentionResult'], units=1, activation=None, name='Predict')
-        self.parameters['Loss'] = tensorflow.losses.huber_loss(
-            labels=self.labelInput, predictions=self.parameters['Predict'])
-        self.train = tensorflow.train.AdamOptimizer(learning_rate=learningRate).minimize(self.parameters['Loss'])
+        self.parameters['Predict_Total'] = tensorflow.layers.dense(
+            inputs=self.parameters['SecondAttentionResult'], units=1, activation=None, name='Predict_Total')
+        self.parameters['Loss_Total'] = tensorflow.losses.huber_loss(
+            labels=self.labelInput, predictions=self.parameters['Predict_Total'])
+        self.trainTotal = tensorflow.train.AdamOptimizer(learning_rate=learningRate).minimize(
+            self.parameters['Loss_Total'],
+            var_list=tensorflow.global_variables()[PRETRAINED_SCOPE[self.firstAttentionName]:])
 
     def Valid(self):
-        result = self.session.run(fetches=self.parameters['Loss'],
+        result = self.session.run(fetches=self.parameters['FirstAttentionList']['AttentionWeight'],
                                   feed_dict={self.dataInput: self.data[0],
                                              self.labelInput: numpy.reshape(self.label[0], [-1, 1])})
         print(numpy.shape(result))
+        result = numpy.reshape(result[0], [250, 40])
+        result = numpy.transpose(result, [1, 0])
+        import matplotlib.pylab as plt
+        plt.imshow(result)
+        plt.xlabel('Frames')
+        plt.ylabel('Bands')
+        plt.colorbar()
+        plt.show()
         # print(result)
 
-    def Train(self, logName):
+    def Train_Total(self, logName):
         trainData, trainLabel = Shuffle_Double(self.data, self.label)
 
         totalLoss = 0.0
         with open(logName, 'w') as file:
             for index in range(numpy.shape(trainData)[0]):
                 loss, _ = self.session.run(
-                    fetches=[self.parameters['Loss'], self.train],
+                    fetches=[self.parameters['Loss_Total'], self.trainTotal],
                     feed_dict={self.dataInput: trainData[index],
                                self.labelInput: numpy.reshape(trainLabel[index], [-1, 1])})
                 file.write(str(loss) + '\n')
@@ -85,12 +106,44 @@ class CRNN(NeuralNetwork_Base):
 
         return totalLoss
 
-    def Test(self, logName, testData, testLabel):
+    def Test_Total(self, logName, testData, testLabel):
         with open(logName, 'w') as file:
             for index in range(numpy.shape(testData)[0]):
                 predict = self.session.run(
-                    fetches=self.parameters['Predict'],
+                    fetches=self.parameters['Predict_Total'],
                     feed_dict={self.dataInput: testData[index]})
 
                 file.write(str(predict[0][0]) + ',' + str(testLabel[index]) + '\n')
                 print('\rTesting %d/%d' % (index, numpy.shape(testData)[0]), end='')
+
+    def Train_Part(self, logName):
+        trainData, trainLabel = Shuffle_Double(self.data, self.label)
+
+        totalLoss = 0.0
+        with open(logName, 'w') as file:
+            for index in range(numpy.shape(trainData)[0]):
+                loss, _ = self.session.run(
+                    fetches=[self.parameters['Loss_Part'], self.trainPart],
+                    feed_dict={self.dataInput: trainData[index],
+                               self.labelInput: numpy.reshape(trainLabel[index], [-1, 1])})
+                file.write(str(loss) + '\n')
+                totalLoss += loss
+
+                print('\rTraining %d/%d Loss = %f' % (index, numpy.shape(trainData)[0], loss), end='')
+
+        return totalLoss
+
+    def Test_Part(self, logName, testData, testLabel):
+        with open(logName, 'w') as file:
+            for index in range(numpy.shape(testData)[0]):
+                predict = self.session.run(
+                    fetches=self.parameters['Predict_Part'],
+                    feed_dict={self.dataInput: testData[index]})
+
+                file.write(str(predict[0][0]) + ',' + str(testLabel[index]) + '\n')
+                print('\rTesting %d/%d' % (index, numpy.shape(testData)[0]), end='')
+
+    def LoadPart(self, loadpath):
+        saver = tensorflow.train.Saver(
+            var_list=tensorflow.global_variables()[0:PRETRAINED_SCOPE[self.firstAttentionName]])
+        saver.restore(self.session, loadpath)

@@ -4,7 +4,7 @@ import os
 import matplotlib.pylab as plt
 
 if __name__ == '__main__':
-    loadpath = 'D:/PythonProjects_Data/Experiment/CRNN-CLA-RSA-TestResult/'
+    loadpath = 'D:/PythonProjects_Data/Experiment/CRNN-CSA-Part-TestResult/'
 
     MAEList, RMSEList = [], []
     for filename in os.listdir(loadpath):

@@ -1,5 +1,6 @@
 import os
 import numpy
+import tensorflow
 from Auxiliary.Loader import Loader_CNN
 from Model.CRNN import CRNN
 from Model.AttentionMechanism.CNN_StandardAttention import CNN_StandardAttentionInitializer
@@ -19,7 +20,7 @@ if __name__ == '__main__':
     secondAttentionScope = None
     secondAttentionName = 'RSA'
 
-    savepath = 'D:/PythonProjects_Data/Experiment/CRNN-%s-%s' % (firstAttentionName, secondAttentionName)
+    savepath = 'D:/PythonProjects_Data/Experiment/CRNN-%s-%s-Part' % (firstAttentionName, secondAttentionName)
     os.makedirs(savepath)
     os.makedirs(savepath + '-TestResult')
 
@@ -29,9 +30,11 @@ if __name__ == '__main__':
         firstAttention=firstAttention, firstAttentionName=firstAttentionName, firstAttentionScope=firstAttentionScope,
         secondAttention=secondAttention, secondAttentionName=secondAttentionName,
         secondAttentionScope=secondAttentionScope)
+
     # classifier.Valid()
     for episode in range(100):
         print('\nTrain Episode %d Total Loss = %f' % (
-            episode, classifier.Train(logName=savepath + '/Loss-%04d.csv' % episode)))
+            episode, classifier.Train_Part(logName=savepath + '/Loss-%04d.csv' % episode)))
         classifier.Save(savepath=savepath + '/Network-%04d' % episode)
-        classifier.Test(logName=savepath + '-TestResult/%04d.csv' % episode, testData=testData, testLabel=testLabel)
+        classifier.Test_Part(logName=savepath + '-TestResult/%04d.csv' % episode, testData=testData,
+                             testLabel=testLabel)
