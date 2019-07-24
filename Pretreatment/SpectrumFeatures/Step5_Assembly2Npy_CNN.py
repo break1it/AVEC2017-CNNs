@@ -6,18 +6,19 @@ MAX_FRAME = 1000
 
 if __name__ == '__main__':
     loadpath = 'D:/PythonProjects_Data/AVEC2017_Data/Step4_Normalization_Part2/'
-    savepath = 'D:/PythonProjects_Data/Data_AVEC2017/CNN-100/'
+    savepath = 'D:/PythonProjects_Data/Data_AVEC2017/CNN-10-Seq/'
     # os.makedirs(savepath)
     for foldA in os.listdir(loadpath):
         os.makedirs(os.path.join(savepath, foldA))
         for foldB in os.listdir(os.path.join(loadpath, foldA)):
-            totalData = []
+            totalData, totalSeq = [], []
 
             for filename in os.listdir(os.path.join(loadpath, foldA, foldB)):
                 if numpy.shape(totalData)[0] >= MAX_SENTENCE: continue
 
                 loadData = numpy.genfromtxt(fname=os.path.join(loadpath, foldA, foldB, filename), dtype=float,
-                                            delimiter=',') * 100
+                                            delimiter=',') * 10
+                totalSeq.append(min(MAX_FRAME, len(loadData)))
 
                 if numpy.shape(loadData)[0] >= MAX_FRAME:
                     currentData = loadData[0:MAX_FRAME]
@@ -32,4 +33,5 @@ if __name__ == '__main__':
             print(foldA, foldB, numpy.shape(totalData))
             # exit()
 
-            numpy.save(file=os.path.join(savepath, foldA, foldB + '.npy'), arr=totalData)
+            # numpy.save(file=os.path.join(savepath, foldA, foldB + '.npy'), arr=totalData)
+            numpy.save(file=os.path.join(savepath, foldA, foldB + '-Label.npy'), arr=totalSeq)

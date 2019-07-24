@@ -11,7 +11,7 @@ from Model.AttentionMechanism.RNN_MonotonicAttention import RNN_MonotonicAttenti
 
 if __name__ == '__main__':
     trainData, trainLabel, developData, developLabel, testData, testLabel = \
-        Loader_CNN(partName='CNN-10')
+        Loader_CNN(partName='CNN-10', maxSentence=10)
 
     firstAttention = CNN_StandardAttentionInitializer
     firstAttentionScope = None
