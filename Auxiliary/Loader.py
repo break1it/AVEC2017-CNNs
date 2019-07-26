@@ -48,7 +48,11 @@ def Loader_CNN_Flexible(partName, maxSentence=5):
                                      delimiter=',')
         for searchIndex in range(min(len(labelData), maxSentence)):
             batchData = numpy.load(file=os.path.join(loadPath, loadPart, '%d_P.npy' % labelData[searchIndex][0]))
-            seqData = numpy.load(os.path.join(seqPath, loadPart, '%d_P-Label.npy' % labelData[searchIndex][0]))
+            seqData = numpy.load(os.path.join(seqPath, loadPart, '%d_P-Label.npy' % labelData[searchIndex][0])).tolist()
+            for index in range(len(seqData)):
+                seqData[index] = int(seqData[index] / 4)
+            while len(seqData) < 128:
+                seqData.append(0)
 
             print('Loading', loadPart, labelData[searchIndex][0], numpy.shape(batchData), numpy.shape(seqData))
 
