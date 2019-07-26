@@ -5,7 +5,7 @@ from Model.Base import NeuralNetwork_Base
 from Auxiliary.Shuffle import Shuffle_Triple
 
 
-class CRNN_Mask(NeuralNetwork_Base):
+class CNN_Mask(NeuralNetwork_Base):
     def __init__(self, trainData, trainLabel, trainSeq, firstAttention, firstAttentionScope, firstAttentionName,
                  secondAttention=None, secondAttentionName=None, secondAttentionScope=None, rnnLayers=1,
                  hiddenNoduleNumber=128, learningRate=1E-3, startFlag=True, graphRevealFlag=True, graphPath='logs/',
@@ -14,7 +14,7 @@ class CRNN_Mask(NeuralNetwork_Base):
         self.firstAttention, self.firstAttentionScope, self.firstAttentionName = firstAttention, firstAttentionScope, firstAttentionName
         self.secondAttention, self.secondAttentionScope, self.secondAttentionName = secondAttention, secondAttentionScope, secondAttentionName
         self.rnnLayers, self.hiddenNoduleNumber = rnnLayers, hiddenNoduleNumber
-        super(CRNN_Mask, self).__init__(
+        super(CNN_Mask, self).__init__(
             trainData=trainData, trainLabel=trainLabel, batchSize=None, learningRate=learningRate,
             startFlag=startFlag, graphRevealFlag=graphRevealFlag, graphPath=graphPath, occupyRate=occupyRate)
 

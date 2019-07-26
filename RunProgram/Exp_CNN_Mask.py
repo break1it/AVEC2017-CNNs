@@ -2,7 +2,7 @@ import os
 import numpy
 import tensorflow
 from Auxiliary.Loader import Loader_CNN_Flexible
-from Model.CRNN_Mask import CRNN_Mask
+from Model.CRNN_Mask import CNN_Mask
 from Model.AttentionMechanism.CNN_StandardAttention import CNN_StandardAttentionInitializer_Mask
 
 if __name__ == '__main__':
@@ -15,12 +15,12 @@ if __name__ == '__main__':
     firstAttentionScope = None
     firstAttentionName = 'CSA'
 
-    savepath = 'D:/PythonProjects_Data/Experiment/CRNN-%s-Mask-Part' % firstAttentionName
+    savepath = 'D:/PythonProjects_Data/Experiment/CNN-%s-Mask-Part' % firstAttentionName
     os.makedirs(savepath)
     os.makedirs(savepath + '-TestResult')
 
-    classifier = CRNN_Mask(trainData=trainData, trainLabel=trainLabel, trainSeq=trainSeq, firstAttention=firstAttention,
-                           firstAttentionName=firstAttentionName, firstAttentionScope=firstAttentionScope)
+    classifier = CNN_Mask(trainData=trainData, trainLabel=trainLabel, trainSeq=trainSeq, firstAttention=firstAttention,
+                          firstAttentionName=firstAttentionName, firstAttentionScope=firstAttentionScope)
     # classifier.Valid()
 
     for episode in range(100):
