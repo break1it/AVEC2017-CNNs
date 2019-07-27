@@ -35,7 +35,7 @@ def Loader_CNN(partName, maxSentence=5):
     return trainData, trainLabel, developData, developLabel, testData, testLabel
 
 
-def Loader_CNN_Flexible(partName, maxSentence=5):
+def Loader_CNN_Flexible(partName, maxSentence=5, maxSpeech=128):
     loadPath = 'D:/PythonProjects_Data/Data_AVEC2017/%s/' % partName
     labelPath = 'D:/PythonProjects_Data/Data_AVEC2017/'
     seqPath = 'D:/PythonProjects_Data/Data_AVEC2017/%s-Seq/' % partName
@@ -51,14 +51,14 @@ def Loader_CNN_Flexible(partName, maxSentence=5):
             seqData = numpy.load(os.path.join(seqPath, loadPart, '%d_P-Label.npy' % labelData[searchIndex][0])).tolist()
             for index in range(len(seqData)):
                 seqData[index] = int(seqData[index] / 4)
-            while len(seqData) < 128:
+            while len(seqData) < maxSpeech:
                 seqData.append(0)
 
             print('Loading', loadPart, labelData[searchIndex][0], numpy.shape(batchData), numpy.shape(seqData))
 
-            if numpy.shape(batchData)[0] < 128:
+            if numpy.shape(batchData)[0] < maxSpeech:
                 batchData = numpy.concatenate([batchData, numpy.zeros(
-                    [128 - numpy.shape(batchData)[0], numpy.shape(batchData)[1], numpy.shape(batchData)[2]])], axis=0)
+                    [maxSpeech - numpy.shape(batchData)[0], numpy.shape(batchData)[1], numpy.shape(batchData)[2]])], axis=0)
 
             if loadPart == 'train':
                 trainData.append(batchData)
