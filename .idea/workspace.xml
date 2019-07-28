@@ -3,9 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="2d64badc-8a89-446e-93d7-bf3a90bb3e1c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auxiliary/Loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auxiliary/Loader.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BestChoose.py" beforeDir="false" afterPath="$PROJECT_DIR$/BestChoose.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/AttentionMechanism/RNN_LocalAttention.py" beforeDir="false" afterPath="$PROJECT_DIR$/Model/AttentionMechanism/RNN_LocalAttention.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/AttentionMechanism/RNN_MonotonicAttention.py" beforeDir="false" afterPath="$PROJECT_DIR$/Model/AttentionMechanism/RNN_MonotonicAttention.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/AttentionMechanism/RNN_StandardAttention.py" beforeDir="false" afterPath="$PROJECT_DIR$/Model/AttentionMechanism/RNN_StandardAttention.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/CRNN_Mask.py" beforeDir="false" afterPath="$PROJECT_DIR$/Model/CRNN_Mask.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RunProgram/Exp_CRNN_Mask.py" beforeDir="false" afterPath="$PROJECT_DIR$/RunProgram/Exp_CRNN_Mask.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,34 +21,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RunProgram/Exp_CRNN_Mask.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="608">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="1024">
+              <caret line="40" selection-start-line="40" selection-end-line="40" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RunProgram/Exp_CNN_Mask.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="832">
-              <caret line="31" selection-start-line="24" selection-end-line="31" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Auxiliary/Loader.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="50" column="39" selection-start-line="50" selection-start-column="39" selection-end-line="50" selection-end-column="39" />
-              <folding>
-                <element signature="e#0#12#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -54,8 +33,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BestChoose.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="544">
+              <caret line="17" column="14" lean-forward="true" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
               <folding>
                 <element signature="e#0#78#0" expanded="true" />
               </folding>
@@ -66,8 +45,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Model/CRNN_Mask.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5120">
-              <caret line="164" selection-end-line="199" />
+            <state relative-caret-position="4800">
+              <caret line="154" column="90" selection-start-line="154" selection-start-column="90" selection-end-line="154" selection-end-column="90" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -76,13 +55,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Model/CRNN.py">
+        <entry file="file://$PROJECT_DIR$/Model/AttentionMechanism/RNN_LocalAttention.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2976">
+              <caret line="93" column="77" selection-start-line="93" selection-start-column="77" selection-end-line="93" selection-end-column="77" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Model/AttentionMechanism/RNN_MonotonicAttention.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2016">
-              <caret line="67" selection-start-line="67" selection-end-line="74" selection-end-column="95" />
+              <caret line="65" selection-start-line="65" selection-end-line="65" />
               <folding>
-                <element signature="e#0#12#0" expanded="true" />
+                <element signature="e#0#17#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Model/AttentionMechanism/RNN_StandardAttention.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1984">
+              <caret line="62" column="62" selection-start-line="62" selection-start-column="62" selection-end-line="62" selection-end-column="72" />
             </state>
           </provider>
         </entry>
@@ -107,6 +104,7 @@
       <find>tanh</find>
       <find>128</find>
       <find>_total</find>
+      <find>_%s</find>
     </findStrings>
     <replaceStrings>
       <replace>/</replace>
@@ -118,9 +116,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/AMIGO/Experiment/Experiment_CNN.py" />
-        <option value="$PROJECT_DIR$/Pretreatment/Step1_Filter.py" />
-        <option value="$PROJECT_DIR$/Pretreatment/Step2_VoiceSeparate.py" />
         <option value="$PROJECT_DIR$/Pretreatment/Step3_SpectrumGeneration.py" />
         <option value="$PROJECT_DIR$/Pretreatment/Step4_Normalization_Part1.py" />
         <option value="$PROJECT_DIR$/Pretreatment/Step4_Normalization_Part2.py" />
@@ -166,13 +161,16 @@
         <option value="$PROJECT_DIR$/Test.py" />
         <option value="$PROJECT_DIR$/RunProgram/Exp_CNN_Mask.py" />
         <option value="$PROJECT_DIR$/Auxiliary/Loader.py" />
+        <option value="$PROJECT_DIR$/Model/AttentionMechanism/RNN_StandardAttention.py" />
+        <option value="$PROJECT_DIR$/Model/AttentionMechanism/RNN_LocalAttention.py" />
+        <option value="$PROJECT_DIR$/Model/AttentionMechanism/RNN_MonotonicAttention.py" />
         <option value="$PROJECT_DIR$/Model/CRNN_Mask.py" />
         <option value="$PROJECT_DIR$/RunProgram/Exp_CRNN_Mask.py" />
         <option value="$PROJECT_DIR$/BestChoose.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-260" />
     <option name="y" value="-23" />
     <option name="width" value="1247" />
@@ -186,7 +184,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -207,12 +204,19 @@
             <path>
               <item name="AVEC2017-CNNs" type="b2602c69:ProjectViewProjectNode" />
               <item name="AVEC2017-CNNs" type="462c0819:PsiDirectoryNode" />
+              <item name="Model" type="462c0819:PsiDirectoryNode" />
+              <item name="AttentionMechanism" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AVEC2017-CNNs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AVEC2017-CNNs" type="462c0819:PsiDirectoryNode" />
               <item name="RunProgram" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -461,12 +465,14 @@
       <workItem from="1564108357505" duration="7121000" />
       <workItem from="1564153147202" duration="599000" />
       <workItem from="1564188704983" duration="4277000" />
-      <workItem from="1564219771896" duration="1849000" />
+      <workItem from="1564219771896" duration="3910000" />
+      <workItem from="1564239889451" duration="244000" />
+      <workItem from="1564278840138" duration="2397000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="390656000" />
+    <option name="totallyTimeSpent" value="395358000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -486,7 +492,30 @@
       <window_info content_ui="combo" id="Project" order="2" weight="0.18656716" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.37310195" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.37310195" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.329718" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Python Console" order="8" weight="0.329718" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Database Changes" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info active="true" anchor="right" id="SciView" order="3" visible="true" weight="0.32995737" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="1" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.18656716" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.37310195" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -502,7 +531,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" weight="0.32995737" />
       <window_info anchor="right" id="Database" order="4" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -552,7 +581,7 @@
     <SUITE FILE_PATH="coverage/AVEC2017_CNNs$Exp_CRNN_Part.coverage" NAME="Exp_CRNN_Part Coverage Results" MODIFIED="1563782154025" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/RunProgram" />
     <SUITE FILE_PATH="coverage/AVEC2017_CNNs$Experiment_NN.coverage" NAME="Experiment_NN Coverage Results" MODIFIED="1562809030939" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AMIGO/Experiment" />
     <SUITE FILE_PATH="coverage/AVEC2017_CNNs$Searcher.coverage" NAME="Searcher Coverage Results" MODIFIED="1563430427964" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Pretreatment/OtherFeatures" />
-    <SUITE FILE_PATH="coverage/AVEC2017_CNNs$Exp_CRNN_Mask__1_.coverage" NAME="Exp_CRNN_Mask (1) Coverage Results" MODIFIED="1564199128574" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/RunProgram" />
+    <SUITE FILE_PATH="coverage/AVEC2017_CNNs$Exp_CRNN_Mask__1_.coverage" NAME="Exp_CRNN_Mask (1) Coverage Results" MODIFIED="1564232464643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/RunProgram" />
     <SUITE FILE_PATH="coverage/AVEC2017_CNNs$Step5_Assembly2Npy_CNN.coverage" NAME="Step5_Assembly2Npy_CNN Coverage Results" MODIFIED="1563778622878" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Pretreatment/SpectrumFeatures" />
     <SUITE FILE_PATH="coverage/AVEC2017_CNNs$Experiment_CNN.coverage" NAME="Experiment_CNN Coverage Results" MODIFIED="1562913162912" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AMIGO/Experiment" />
     <SUITE FILE_PATH="coverage/AVEC2017_CNNs$MM_Analysis.coverage" NAME="MM_Analysis Coverage Results" MODIFIED="1562844428175" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AMIGO/MultiMedia" />
@@ -561,7 +590,7 @@
     <SUITE FILE_PATH="coverage/AVEC2017_CNNs$Step4_MultiDecision.coverage" NAME="Step4_MultiDecision Coverage Results" MODIFIED="1563101751275" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LIDC_Again/Pretreatment" />
     <SUITE FILE_PATH="coverage/AVEC2017_CNNs$Step3_Assembly.coverage" NAME="Step3_Assembly Coverage Results" MODIFIED="1563441009193" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Pretreatment/OtherFeatures" />
     <SUITE FILE_PATH="coverage/AVEC2017_CNNs$Exp_CRNN.coverage" NAME="Exp_CRNN Coverage Results" MODIFIED="1563693989623" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/RunProgram" />
-    <SUITE FILE_PATH="coverage/AVEC2017_CNNs$BestChoose.coverage" NAME="BestChoose Coverage Results" MODIFIED="1564220343263" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AVEC2017_CNNs$BestChoose.coverage" NAME="BestChoose Coverage Results" MODIFIED="1564239982763" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/AVEC2017_CNNs$Step1_CMULabel_Generation.coverage" NAME="Step1_CMULabel_Generation Coverage Results" MODIFIED="1561902859086" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Pretreatment/CMU_Label_Treatment" />
     <SUITE FILE_PATH="coverage/AVEC2017_CNNs$Step4_Assembly.coverage" NAME="Step4_Assembly Coverage Results" MODIFIED="1562904959037" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AMIGO/Pretreatment/CNNTreatment" />
     <SUITE FILE_PATH="coverage/AVEC2017_CNNs$Exp_CRNN_Total.coverage" NAME="Exp_CRNN_Total Coverage Results" MODIFIED="1563769359752" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/RunProgram" />
@@ -588,26 +617,6 @@
     <SUITE FILE_PATH="coverage/AVEC2017_CNNs$Step4_Split.coverage" NAME="Step4_Split Coverage Results" MODIFIED="1562550731250" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AMIGO/Pretreatment" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Pretreatment/OtherFeatures/Step1_Features_AU.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="26" column="120" lean-forward="true" selection-start-line="23" selection-start-column="8" selection-end-line="26" selection-end-column="120" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pretreatment/OtherFeatures/Step1_Features_FORMANT.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Pretreatment/OtherFeatures/Step3_Assembly.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
@@ -691,13 +700,6 @@
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Model/AttentionMechanism/RNN_StandardAttention.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="784">
-          <caret line="56" column="24" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -801,42 +803,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RunProgram/Exp_CRNN_Mask.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RunProgram/Exp_CNN_Mask.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="832">
           <caret line="31" selection-start-line="24" selection-end-line="31" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Model/CRNN_Mask.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5120">
-          <caret line="164" selection-end-line="199" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Model/CRNN.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2016">
-          <caret line="67" selection-start-line="67" selection-end-line="74" selection-end-column="95" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -851,10 +823,64 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Model/CRNN.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="67" selection-start-line="67" selection-end-line="74" selection-end-column="95" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RunProgram/Exp_CRNN_Mask.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1024">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/CRNN_Mask.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4800">
+          <caret line="154" column="90" selection-start-line="154" selection-start-column="90" selection-end-line="154" selection-end-column="90" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/AttentionMechanism/RNN_LocalAttention.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2976">
+          <caret line="93" column="77" selection-start-line="93" selection-start-column="77" selection-end-line="93" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/AttentionMechanism/RNN_MonotonicAttention.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2016">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/AttentionMechanism/RNN_StandardAttention.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1984">
+          <caret line="62" column="62" selection-start-line="62" selection-start-column="62" selection-end-line="62" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/BestChoose.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="544">
+          <caret line="17" column="14" lean-forward="true" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
           <folding>
             <element signature="e#0#78#0" expanded="true" />
           </folding>

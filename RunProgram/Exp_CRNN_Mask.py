@@ -4,9 +4,9 @@ import tensorflow
 from Auxiliary.Loader import Loader_CNN_Flexible
 from Model.CRNN_Mask import CRNN_Mask
 from Model.AttentionMechanism.CNN_StandardAttention import CNN_StandardAttentionInitializer_Mask
-from Model.AttentionMechanism.RNN_StandardAttention import RNN_StandardAttentionInitializer
-from Model.AttentionMechanism.RNN_LocalAttention import RNN_LocalAttentionInitializer
-from Model.AttentionMechanism.RNN_MonotonicAttention import RNN_MonotonicAttentionInitializer
+from Model.AttentionMechanism.RNN_StandardAttention import RNN_StandardAttentionInitializer_Mask
+from Model.AttentionMechanism.RNN_LocalAttention import RNN_LocalAttentionInitializer_Mask
+from Model.AttentionMechanism.RNN_MonotonicAttention import RNN_MonotonicAttentionInitializer_Mask
 
 if __name__ == '__main__':
     trainData, trainLabel, trainSeq, developData, developLabel, developSeq, testData, testLabel, testSeq = \
@@ -18,11 +18,12 @@ if __name__ == '__main__':
     firstAttentionScope = None
     firstAttentionName = 'CSA'
 
-    secondAttention = RNN_StandardAttentionInitializer
+    secondAttention = RNN_StandardAttentionInitializer_Mask
     secondAttentionScope = None
-    secondAttentionName = 'RSA'
+    secondAttentionName = 'RSA_MASK'
 
-    savepath = 'D:/PythonProjects_Data/Experiment/CRNN-%s-Mask-Part' % firstAttentionName
+    savepath = 'D:/PythonProjects_Data/AVEC2017-Experiment-Mask/CRNN-%s-%s-Mask-Part' % (
+        firstAttentionName, secondAttentionName)
     os.makedirs(savepath)
     os.makedirs(savepath + '-TestResult')
 

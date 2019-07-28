@@ -58,3 +58,47 @@ def RNN_StandardAttentionInitializer(dataInput, scopeName, hiddenNoduleNumber, a
                                                                 axis=1, name='FinalResult')
 
     return networkParameter
+
+
+def RNN_StandardAttentionInitializer_Mask(dataInput, scopeName, seqInput, hiddenNoduleNumber, attentionScope=None,
+                                          blstmFlag=True):
+    with tensorflow.name_scope(scopeName):
+        networkParameter = {}
+
+        if blstmFlag:
+            networkParameter['DataInput'] = tensorflow.concat([dataInput[0], dataInput[1]], axis=2, name='DataInput')
+        else:
+            networkParameter['DataInput'] = dataInput
+
+        networkParameter['BatchSize'], networkParameter['TimeStep'], networkParameter[
+            'HiddenNoduleNumber'] = tensorflow.unstack(
+            tensorflow.shape(networkParameter['DataInput'], name='Shape'))
+
+        networkParameter['DataReshape'] = tensorflow.reshape(
+            tensor=networkParameter['DataInput'],
+            shape=[networkParameter['BatchSize'] * networkParameter['TimeStep'],
+                   networkParameter['HiddenNoduleNumber']],
+            name='Reshape')
+        networkParameter['DataReshape'].set_shape([None, hiddenNoduleNumber])
+
+        networkParameter['AttentionWeight'] = tensorflow.layers.dense(
+            inputs=networkParameter['DataReshape'], units=1, activation=None, name='Weight_%s' % scopeName)
+
+        networkParameter['AttentionReshape'] = tensorflow.reshape(
+            tensor=networkParameter['AttentionWeight'],
+            shape=[networkParameter['BatchSize'], networkParameter['TimeStep']],
+            name='WeightReshape')
+        networkParameter['AttentionFinal'] = tensorflow.nn.softmax(logits=networkParameter['AttentionReshape'],
+                                                                   name='AttentionFinal')
+
+        networkParameter['AttentionSupplement'] = tensorflow.tile(
+            input=networkParameter['AttentionFinal'][:, :, tensorflow.newaxis],
+            multiples=[1, 1, hiddenNoduleNumber],
+            name='AttentionSupplement')
+        networkParameter['FinalResult_Media'] = tensorflow.multiply(x=networkParameter['DataInput'],
+                                                                    y=networkParameter['AttentionSupplement'],
+                                                                    name='FinalResult_Media')
+        networkParameter['FinalResult'] = tensorflow.reduce_sum(input_tensor=networkParameter['FinalResult_Media'],
+                                                                axis=1, name='FinalResult')
+
+    return networkParameter

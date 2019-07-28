@@ -152,7 +152,7 @@ class CRNN_Mask(NeuralNetwork_Base):
                 inputs=self.parameters['FirstAttentionResult'][tensorflow.newaxis, :, :], dtype=tensorflow.float32)
 
         self.parameters['SecondAttention'] = self.secondAttention(
-            dataInput=self.parameters['BLSTM_Output'], scopeName=self.secondAttentionName,
+            dataInput=self.parameters['BLSTM_Output'], scopeName=self.secondAttentionName, seqInput=None,
             hiddenNoduleNumber=2 * self.hiddenNoduleNumber, attentionScope=self.secondAttentionScope, blstmFlag=True)
         self.parameters['SecondAttentionResult'] = self.parameters['SecondAttention']['FinalResult']
 
