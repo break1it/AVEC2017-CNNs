@@ -22,19 +22,12 @@ if __name__ == '__main__':
     secondAttentionScope = None
     secondAttentionName = 'RSA_MASK'
 
-    # savepath = 'D:/PythonProjects_Data/AVEC2017-Experiment-Test/CRNN-%s-%s-Mask-Part' % (
-    #     firstAttentionName, secondAttentionName)
-    # os.makedirs(savepath)
-    # os.makedirs(savepath + '-TestResult')
+    loadpath = 'D:/PythonProjects_Data/AVEC2017-Experiment-Mask/BLSTM-Changes-CRNN-%s-%s-Part' % (
+        firstAttentionName, secondAttentionName)
 
     classifier = CRNN_Mask(
         trainData=trainData, trainLabel=trainLabel, trainSeq=trainSeq, firstAttention=firstAttention,
         firstAttentionName=firstAttentionName, firstAttentionScope=firstAttentionScope, secondAttention=secondAttention,
-        secondAttentionName=secondAttentionName, secondAttentionScope=secondAttentionScope)
+        secondAttentionName=secondAttentionName, secondAttentionScope=secondAttentionScope, startFlag=False)
+    classifier.Load(loadpath=loadpath + '/Network-%04d' % 99)
     classifier.Valid()
-    # for episode in range(100):
-    #     print('\nTrain Episode %d Total Loss = %f' % (
-    #         episode, classifier.Train(logName=savepath + '/Loss-%04d.csv' % episode)))
-    #     classifier.Save(savepath=savepath + '/Network-%04d' % episode)
-    #     classifier.Test(logName=savepath + '-TestResult/%04d.csv' % episode, testData=testData,
-    #                     testLabel=testLabel, testSeq=testSeq)

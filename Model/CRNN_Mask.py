@@ -154,22 +154,53 @@ class CRNN_Mask(NeuralNetwork_Base):
         self.parameters['SecondAttention'] = self.secondAttention(
             dataInput=self.parameters['BLSTM_Output'], scopeName=self.secondAttentionName, seqInput=None,
             hiddenNoduleNumber=2 * self.hiddenNoduleNumber, attentionScope=self.secondAttentionScope, blstmFlag=True)
-        self.parameters['SecondAttentionResult'] = self.parameters['SecondAttention']['FinalResult']
-
-        self.parameters['Predict'] = tensorflow.layers.dense(
-            inputs=self.parameters['SecondAttentionResult'], units=1, activation=None, name='Predict')
-        self.parameters['Loss'] = tensorflow.losses.huber_loss(
-            labels=self.labelInput, predictions=self.parameters['Predict'])
-        self.train = tensorflow.train.AdamOptimizer(learning_rate=learningRate).minimize(
-            self.parameters['Loss'])
+        # self.parameters['SecondAttentionResult'] = self.parameters['SecondAttention']['FinalResult']
+        #
+        # self.parameters['Predict'] = tensorflow.layers.dense(
+        #     inputs=self.parameters['SecondAttentionResult'], units=1, activation=None, name='Predict')
+        # self.parameters['Loss'] = tensorflow.losses.huber_loss(
+        #     labels=self.labelInput, predictions=self.parameters['Predict'])
+        # self.train = tensorflow.train.AdamOptimizer(learning_rate=learningRate).minimize(
+        #     self.parameters['Loss'])
 
     def Valid(self):
-        result = self.session.run(fetches=self.parameters['Loss'],
+        result = self.session.run(fetches=self.parameters['SecondAttention']['AttentionWeight_SoftMax'],
                                   feed_dict={self.dataInput: self.data[0],
                                              self.labelInput: numpy.reshape(self.label[0], [-1, 1]),
                                              self.seqInput: self.seq[0]})
         print(numpy.shape(result))
-        print(result)
+
+        # result = self.session.run(fetches=self.parameters['FirstAttentionList']['AttentionWeight_SoftMax'],
+        #                           feed_dict={self.dataInput: self.data[0],
+        #                                      self.labelInput: numpy.reshape(self.label[0], [-1, 1]),
+        #                                      self.seqInput: self.seq[0]})
+        # result = numpy.reshape(result, [-1, 250, 40])
+        # result = numpy.transpose(result[0][0:30], [1, 0])
+
+        # import matplotlib.pylab as plt
+        # from sklearn.preprocessing import minmax_scale
+
+        # result = minmax_scale(result)
+        # plt.imshow(result,origin='lower')
+        # plt.colorbar()
+        # plt.title('Monotonic Attention')
+        # plt.xlabel('X Scope')
+        # plt.ylabel('Y Scope')
+        # plt.show()
+        # print(numpy.shape(result))
+
+        # result = self.session.run(fetches=self.parameters['SecondAttention']['AttentionFinal'],
+        #                           feed_dict={self.dataInput: self.data[0],
+        #                                      self.labelInput: numpy.reshape(self.label[0], [-1, 1]),
+        #                                      self.seqInput: self.seq[0]})
+        # print(result)
+        # result = numpy.reshape(result, [-1])
+        # result = minmax_scale(result)
+        # plt.title('Local Attention')
+        # plt.xlabel('Sentence Number')
+        # plt.ylabel('Weight')
+        # plt.plot(result)
+        # plt.show()
 
     def Train(self, logName):
         trainData, trainLabel, trainSeq = Shuffle_Triple(self.data, self.label, self.seq)
