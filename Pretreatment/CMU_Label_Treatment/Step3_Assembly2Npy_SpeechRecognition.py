@@ -4,15 +4,14 @@ import os
 maxLen = 1000
 
 if __name__ == '__main__':
-    datapath = 'D:/PythonProjects_Data/AVEC2017_Step4_Normalization_Part2/'
-    labelpath = 'D:/PythonProjects_Data/AVEC2017_CMU_Label/'
-    savepath = 'D:/PythonProjects_Data/Data_AVEC2017_SpeechRecognition/'
+    datapath = 'D:/PythonProjects_Data/AVEC2017_Data/Step4_Normalization_Part2/'
+    labelpath = 'D:/PythonProjects_Data/AVEC2017_Data/CMU_Step2_Label/'
+    savepath = 'D:/PythonProjects_Data/AVEC2017_Data/CMU_Step3_Assembly/'
 
     for foldX in os.listdir(datapath):
         os.makedirs(os.path.join(savepath, foldX))
         for foldY in os.listdir(os.path.join(datapath, foldX)):
             partData, partSeq, partLabel = [], [], []
-            print(foldX, foldY)
             for filename in os.listdir(os.path.join(datapath, foldX, foldY)):
                 data = numpy.genfromtxt(fname=os.path.join(datapath, foldX, foldY, filename), dtype=float,
                                         delimiter=',')
@@ -30,6 +29,7 @@ if __name__ == '__main__':
                 partLabel.append(label)
 
             # print(partSeq)
+            print(foldX, foldY, numpy.shape(partData))
             # print(numpy.shape(partData))
 
             numpy.save(file=os.path.join(savepath, foldX, foldY + '_Data.npy'), arr=partData, allow_pickle=True)

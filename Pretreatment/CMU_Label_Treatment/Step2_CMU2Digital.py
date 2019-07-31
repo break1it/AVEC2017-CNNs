@@ -7,8 +7,8 @@ dictionary = {'AA': 1, 'AE': 2, 'AH': 3, 'AO': 4, 'AW': 5, 'AY': 6, 'B': 7, 'CH'
               'UW': 34, 'V': 35, 'W': 36, 'Y': 37, 'Z': 38, 'ZH': 39}
 
 if __name__ == '__main__':
-    loadpath = 'D:/PythonProjects_Data/AVEC2017_CMU_RAW/'
-    savepath = 'D:/PythonProjects_Data/AVEC2017_CMU_Label/'
+    loadpath = 'D:/PythonProjects_Data/AVEC2017_Data/CMU_Step1_RAW/'
+    savepath = 'D:/PythonProjects_Data/AVEC2017_Data/CMU_Step2_Label/'
 
     for foldX in os.listdir(loadpath):
         for foldY in os.listdir(os.path.join(loadpath, foldX)):

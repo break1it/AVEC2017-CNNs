@@ -41,8 +41,8 @@ def Transform2CMU(inputData, dictionary):
 if __name__ == '__main__':
     dictionary = LoadDictionary()
 
-    loadpath = 'D:/PythonProjects_Data/AVEC2017_Step2_VoiceSeparate/'
-    savepath = 'D:/PythonProjects_Data/AVEC2017_CMU_RAW/'
+    loadpath = 'D:/PythonProjects_Data/AVEC2017_Data/Step2_VoiceSeparate/'
+    savepath = 'D:/PythonProjects_Data/AVEC2017_Data/CMU_Step1_RAW/'
     for foldX in os.listdir(loadpath):
         for foldY in os.listdir(os.path.join(loadpath, foldX)):
             os.makedirs(os.path.join(savepath, foldX, foldY))
